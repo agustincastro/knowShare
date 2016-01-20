@@ -1,0 +1,7 @@
+out/
+target/
+*.class
+pom.xml
+*.log
+*.txt
+.DS_Store

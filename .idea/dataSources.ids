@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="hibernate.cfg.xml" product="MySQL" version="5.5.38-0ubuntu0.14.04.1" jdbc-version="3.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.9 ( Revision: ${svn.Revision} )" uuid="2c9ddcb7-dfc4-46d6-adb9-5f2eb6103ce0">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <auto-commit>false</auto-commit>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost:3306/gestac</jdbc-url>
+    <user-name>gestac</user-name>
+    <user-password>dfcddfcfdfd9dfdedfcbdfc9</user-password>
+    <schema-pattern>gestac.*</schema-pattern>
+    <default-schemas>gestac.*</default-schemas>
+    <default-dialect>MySQL</default-dialect>
+    <libraries>
+      <library>
+        <url>jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.jar!/</url>
+      </library>
+    </libraries>
+    <schema name="" catalog="gestac"/>
+    <table name="areas" schema="" catalog="gestac" type="TABLE">
+      <column name="id" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="description" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="problems_ibfk_1" table="problems" schema="" catalog="gestac" columns="area_id"/>
+      <exported-key name="users_ibfk_1" table="users" schema="" catalog="gestac" columns="area_id"/>
+    </table>
+    <table name="communities" schema="" catalog="gestac" type="TABLE">
+      <column name="name" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="id" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="users_ibfk_2" table="users" schema="" catalog="gestac" columns="community_id"/>
+    </table>
+    <table name="knowledges" schema="" catalog="gestac" type="TABLE">
+      <column name="id" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="problem_id" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="time_to_solved" sqlType="DECIMAL" length="10" precision="2" nullable="true" jdbcType="3"/>
+      <column name="usage_frequency" sqlType="DECIMAL" length="10" precision="2" nullable="true" jdbcType="3"/>
+      <column name="created_time" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="source_who_wrote_id" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="source_with_knowledge_id" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="video_url" sqlType="VARCHAR" length="200" precision="0" nullable="true" jdbcType="12"/>
+      <column name="brief_description" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="keywords" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="veracity" sqlType="DECIMAL" length="10" precision="2" nullable="false" jdbcType="3"/>
+      <column name="source_can_improve_id" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="rating" sqlType="DECIMAL" length="10" precision="2" nullable="true" jdbcType="3" def="MC4wMA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="knowledges_ibfk_1" columns="problem_id" ref-table="problems" ref-schema="" ref-catalog="gestac" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="knowledges_ibfk_2" columns="source_who_wrote_id" ref-table="users" ref-schema="" ref-catalog="gestac" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="knowledges_ibfk_3" columns="source_with_knowledge_id" ref-table="users" ref-schema="" ref-catalog="gestac" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="knowledges_ibfk_4" columns="source_can_improve_id" ref-table="users" ref-schema="" ref-catalog="gestac" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="problems" schema="" catalog="gestac" type="TABLE">
+      <column name="id" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" length="200" precision="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" length="1000" precision="0" nullable="false" jdbcType="12"/>
+      <column name="area_id" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="best_source_id" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="problems_ibfk_1" columns="area_id" ref-table="areas" ref-schema="" ref-catalog="gestac" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="problems_ibfk_2" columns="best_source_id" ref-table="users" ref-schema="" ref-catalog="gestac" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="knowledges_ibfk_1" table="knowledges" schema="" catalog="gestac" columns="problem_id"/>
+    </table>
+    <table name="users" schema="" catalog="gestac" type="TABLE">
+      <column name="id" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12"/>
+      <column name="last_name" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" length="40" precision="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="expertise_level" sqlType="DECIMAL" length="10" precision="2" nullable="true" jdbcType="3"/>
+      <column name="type" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" length="1000" precision="0" nullable="true" jdbcType="12"/>
+      <column name="area_id" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="community_id" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="source_type" sqlType="VARCHAR" length="10" precision="0" nullable="true" jdbcType="12"/>
+      <column name="is_valid" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="users_ibfk_1" columns="area_id" ref-table="areas" ref-schema="" ref-catalog="gestac" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="users_ibfk_2" columns="community_id" ref-table="communities" ref-schema="" ref-catalog="gestac" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="knowledges_ibfk_2" table="knowledges" schema="" catalog="gestac" columns="source_who_wrote_id"/>
+      <exported-key name="knowledges_ibfk_3" table="knowledges" schema="" catalog="gestac" columns="source_with_knowledge_id"/>
+      <exported-key name="knowledges_ibfk_4" table="knowledges" schema="" catalog="gestac" columns="source_can_improve_id"/>
+      <exported-key name="problems_ibfk_2" table="problems" schema="" catalog="gestac" columns="best_source_id"/>
+      <index name="unique_email" unique="true" columns="email"/>
+    </table>
+  </data-source>
+  <data-source source="LOCAL" name="Amazon Data Source" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="31db6303-3adc-491d-8dfc-351b29e1dce1">
+    <synchronize>true</synchronize>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://54.207.96.166:3306/gestac</jdbc-url>
+    <user-name>gestac</user-name>
+    <user-password>dfcddfcfdfd9dfdedfcbdfc9</user-password>
+    <libraries>
+      <library>
+        <url>jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.jar!/</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>
