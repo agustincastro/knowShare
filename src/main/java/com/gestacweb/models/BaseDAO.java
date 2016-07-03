@@ -53,7 +53,7 @@ public abstract class BaseDAO<T> implements DAO<T> {
         Session session = getSession();
         Transaction t = session.beginTransaction();
         try{
-            session.update(entity);
+            session.delete(entity);
             t.commit();
         }catch(HibernateException e){
             e.printStackTrace();

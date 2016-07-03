@@ -2,6 +2,7 @@ package com.gestacweb.models.community;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Objects;
 
 
 @Entity
@@ -44,4 +45,22 @@ public class Community implements Serializable{
     public void setDescription(String description) {
         this.description = description;
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this.id == ((Community)obj).id)
+            return true;
+        else return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 31 * hash + (int) (this.id ^ (this.id >>> 32));
+        hash = 31 * hash + Objects.hashCode(this.name);
+        hash = 31 * hash + Objects.hashCode(this.description);
+        return hash;
+    }
+
+ 
 }

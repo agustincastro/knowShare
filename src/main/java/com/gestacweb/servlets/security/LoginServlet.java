@@ -36,7 +36,7 @@ public class LoginServlet extends HttpServlet{
             request.getRequestDispatcher("login.jsp");
         } else {
 
-            if(authenticateUser(username, password)){
+            if(autenticateUser(username, password)){
                 request.getSession().setAttribute(WebConstants.LOGGED_USER, username);
                 request.getSession().setAttribute(WebConstants.LOGGED_USER_TYPE, ((UserDAO)DAOFactory.getDAO(DAOType.USER)).findByEmail(username).getType());
                 request.setAttribute(WebConstants.LOGGED_USER, username);
@@ -50,7 +50,7 @@ public class LoginServlet extends HttpServlet{
         }
     }
 
-    private boolean authenticateUser(String username, String password){
+    private boolean autenticateUser(String username, String password){
 
         User user = ((UserDAO)DAOFactory.getDAO(DAOType.USER)).findByEmail(username);
         return user !=  null && BCrypt.checkpw(password, user.getPassword());

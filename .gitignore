@@ -5,3 +5,4 @@ pom.xml
 *.log
 *.txt
 .DS_Store
+/GestacDependencies/nbproject/private/

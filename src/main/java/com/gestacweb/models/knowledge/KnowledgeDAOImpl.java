@@ -28,6 +28,11 @@ public class KnowledgeDAOImpl extends BaseDAO<Knowledge> implements KnowledgeDAO
 
         super.update(knowledge);
     }
+    
+    @Override
+    public void delete(Knowledge knowledge) {
+        super.delete(knowledge);
+    }
 
     @Override
     public Knowledge findById(long id) {

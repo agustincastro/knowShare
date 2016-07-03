@@ -11,24 +11,23 @@
 
             <table id="knowledgesTable" class="fa-table">
                 <thead>
-                <c:if test="${not sessionScope.LOGGED_USER_TYPE eq 'USER'}">
-                <th></th>
-                </c:if>
-                <th></th>
                 <th>Título</th>
                 <th>Problema que resuelve</th>
-                <th>Ponderación</th>
+                <th>Ponderación</th> 
+                <c:if test="${sessionScope.LOGGED_USER_TYPE eq 'ADMIN'}">
+                    <th>Acciones</th>
+                </c:if>
                 </thead>
                 <tbody>
                 <c:forEach items="${requestScope.KNOWLEDGES_LIST}" var="knowledge">
-                    <tr>
-                        <c:if test="${not sessionScope.LOGGED_USER_TYPE eq 'USER'}">
-                        <td><a href="<c:url value="editknowledge?id=${knowledge.id}"/>">Editar</a></td>
-                        </c:if>
-                        <td><a href="<c:url value="rateknowledge?id=${knowledge.id}"/>">Ponderar</a></td>
+                    <tr>                        
                         <td>${knowledge.title}</td>
                         <td>${knowledge.problem.title}</td>
                         <td>${knowledge.rating}</td>
+
+                        <c:if test="${sessionScope.LOGGED_USER_TYPE eq 'ADMIN'}">
+                            <td><a href="<c:url value="editknowledge?id=${knowledge.id}"/>">Editar</a>/<a href="<c:url value="rateknowledge?id=${knowledge.id}"/>">Ponderar</a>/<a href="<c:url value="deleteknowledge?id=${knowledge.id}"/>">Borrar</a></td>
+                        </c:if>
                     </tr>
                 </c:forEach>
 

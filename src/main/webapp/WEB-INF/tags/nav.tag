@@ -54,6 +54,7 @@
                 <ul class="sub">
                     <li><a href="<c:url value='managecommunities'/>">Administrar Comunidades</a></li>
                     <li><a href="<c:url value='newcommunity'/>">Nueva Comunidad</a></li>
+
                 </ul>
             </li>
             <li><a href="#"><i class="fa fa-codepen">

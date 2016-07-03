@@ -107,16 +107,9 @@ public class Problem implements Serializable{
     //Compare only id
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        if (this.id == ((Problem)obj).id)
             return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Problem other = (Problem) obj;
-        if (id != other.id)
-            return false;
-        return true;
+        else return false;
     }
 
     public JSONObject toJson() throws JSONException{

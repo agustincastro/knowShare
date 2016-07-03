@@ -8,6 +8,7 @@ import org.codehaus.jettison.json.JSONObject;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 
 @Entity
@@ -197,9 +198,45 @@ public class Knowledge implements Serializable {
         return object;
     }
 
+    @Override
     public Knowledge clone(){
 
         return new Knowledge();
+    }
+    
+    //Compare only id
+
+    /**
+     *
+     * @param obj
+     * @return
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this.id == ((Knowledge)obj).id)
+            return true;
+        else return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 67 * hash + (int) (this.id ^ (this.id >>> 32));
+        hash = 67 * hash + Objects.hashCode(this.title);
+        hash = 67 * hash + Objects.hashCode(this.sourceWhoWrote);
+        hash = 67 * hash + Objects.hashCode(this.sourceWithKnowledge);
+        hash = 67 * hash + Objects.hashCode(this.problem);
+        hash = 67 * hash + Objects.hashCode(this.briefDescription);
+        hash = 67 * hash + Objects.hashCode(this.description);
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.timeToSolved) ^ (Double.doubleToLongBits(this.timeToSolved) >>> 32));
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.usageFrecuency) ^ (Double.doubleToLongBits(this.usageFrecuency) >>> 32));
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.veracity) ^ (Double.doubleToLongBits(this.veracity) >>> 32));
+        hash = 67 * hash + Objects.hashCode(this.createTime);
+        hash = 67 * hash + Objects.hashCode(this.keywords);
+        hash = 67 * hash + Objects.hashCode(this.videoUrl);
+        hash = 67 * hash + Objects.hashCode(this.sourceCanImprove);
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.rating) ^ (Double.doubleToLongBits(this.rating) >>> 32));
+        return hash;
     }
 
 }

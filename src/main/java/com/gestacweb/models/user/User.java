@@ -20,7 +20,7 @@ public class User implements Serializable{
     public static final String USER = "USER";
     public static final String ADMIN = "ADMIN";
 
-    private long id;
+    protected long id;
 
     private String name;
 

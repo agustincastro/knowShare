@@ -116,15 +116,8 @@ public class Source extends User{
     //Compare only id
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        if (this.id == ((Source)obj).id)
             return true;
-        if (obj == null)
-            return false;
-        //if (getClass() != obj.getClass())
-        //    return false;
-        Source other = (Source) obj;
-        if (getId() != other.getId())
-            return false;
-        return true;
+        else return false;
     }
 }

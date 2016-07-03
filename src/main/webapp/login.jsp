@@ -13,7 +13,7 @@
                         <ul>
                             <li>
                                 <i style="font-family: FontAwesome; content: \f086" class="fa fa-comments"></i>¿Qué es GESTAC?
-                                <p style="font-size:12px" >Es un un programa de permite capturar, registrar y gestionar conocimientos tácitos necesarios para el logro de los objetivos empresariales.</p>
+                                <p style="font-size:12px" >Es un un programa que permite capturar, registrar y gestionar conocimientos tácitos necesarios para el logro de los objetivos empresariales.</p>
                             </li>
                             <li>
                                 <i class="fa fa-cloud"></i>¿Qué es la Plataforma?
@@ -21,10 +21,7 @@
                                     • Un directorio interactivo de conocimientos y fuentes de conocimientos<br>
                                     • Ponderacion de fuentes y del conocimiento que se brindo a la plataforma<br>
                                     • Funcionalidades de alta, baja y modificacion de los distintos objetos que se utilizaran como insumos en la pltaforma.
-                            </li>
-                            <li>
-                                <i class="fa fa-users"></i>¿Quiere entrar como un usuario anonimo?
-                                <p style="font-size:12px">Utilice el <strong>usuario</strong>: usuario y <strong>password</strong>: usuario para ingresar a ver de que trata la plataforma. Recuerde que con este usuario no podrá utilizar ninguna funcionalidad. Para poder utilizar la misma debe registrarse.</p>
+                            </li>                            
                                 <p style="font-size: 12px; font-weight: bold;">Registrese en la plataforma simplemente con un <strong>e-mail</strong> y <strong>contraseña</strong> adecuada.</p>
                             </li>
                             <li>

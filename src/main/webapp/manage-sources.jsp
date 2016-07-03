@@ -11,21 +11,20 @@
 
             <table id="problemsTable" class="fa-table">
                 <thead>
-                <th></th>
                 <th>Email</th>
                 <th>Área</th>
                 <th>Ponderación</th>
+                <th>Acciones</th>
                 </thead>
                 <tbody>
                 <c:forEach items="${requestScope.SOURCES_LIST}" var="source">
                     <tr>
-                        <td><a href="<c:url value="editsource?id=${source.id}"/>">Editar</a></td>
                         <td>${source.email}</td>
                         <td>${source.area.name}</td>
                         <td>${source.expertiseLevel}</td>
+                        <td><a href="<c:url value="editsource?id=${source.id}"/>">Editar</a> | <a href="<c:url value="deletesource?id=${source.id}"/>">Borrar</a>
                     </tr>
                 </c:forEach>
-
                 </tbody>
             </table>
 
