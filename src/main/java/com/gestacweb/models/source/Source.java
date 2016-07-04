@@ -32,10 +32,13 @@ public class Source extends User{
 
     private Community community;
 
-    // the source is valid if it filled his first evaluation form
-    private boolean isValid;
+
 
     private Set<Knowledge> problemsToImprove;
+
+    public Source() {
+      isValid = true;
+    }
 
     @Column(name = "expertise_level", nullable = true)
     public double getExpertiseLevel() {
@@ -82,15 +85,6 @@ public class Source extends User{
 
     public void setCommunity(Community community) {
         this.community = community;
-    }
-
-    @Column(name = "is_valid", nullable = false)
-    public boolean isValid() {
-        return isValid;
-    }
-
-    public void setValid(boolean valid) {
-        isValid = valid;
     }
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "sourceCanImprove")

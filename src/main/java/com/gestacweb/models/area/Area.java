@@ -23,6 +23,11 @@ public class Area implements Serializable{
     private String name;
     private String description;
     private Set<Source> sources;
+    private boolean isValid;
+
+    public Area() {
+      isValid = true;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -51,6 +56,16 @@ public class Area implements Serializable{
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Column(name = "is_valid", nullable = false)
+    public boolean isValid() {
+        return isValid;
+    }
+
+    public void setValid(boolean valid) {
+        isValid = valid;
+    }
+
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "area")
     @OrderBy("expertiseLevel desc")

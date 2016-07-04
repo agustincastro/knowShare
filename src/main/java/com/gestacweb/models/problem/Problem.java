@@ -37,6 +37,11 @@ public class Problem implements Serializable{
     private Area area;
     private List<Knowledge> knowledges;
     private Source bestSourceToSolveProblem;
+    private boolean isValid;
+
+    public Problem() {
+      isValid = true;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -85,6 +90,15 @@ public class Problem implements Serializable{
     @JoinColumn(name = "best_source_id", nullable = true)
     public Source getBestSourceToSolveProblem() {
         return bestSourceToSolveProblem;
+    }
+
+    @Column(name = "is_valid", nullable = false)
+    public boolean isValid() {
+        return isValid;
+    }
+
+    public void setValid(boolean valid) {
+        isValid = valid;
     }
 
     public void setBestSourceToSolveProblem(Source bestSourceToSolveProblem) {

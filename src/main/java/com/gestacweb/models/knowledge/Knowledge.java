@@ -39,6 +39,11 @@ public class Knowledge implements Serializable {
     private String videoUrl;
     private Source sourceCanImprove;
     private double rating;
+    private boolean isValid;
+
+    public Knowledge() {
+      isValid = true;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -187,6 +192,15 @@ public class Knowledge implements Serializable {
         return rating;
     }
 
+    @Column(name = "is_valid", nullable = false)
+    public boolean isValid() {
+        return isValid;
+    }
+
+    public void setValid(boolean valid) {
+        isValid = valid;
+    }
+
     public void setRating(double rating) {
         this.rating = rating;
     }
@@ -203,7 +217,7 @@ public class Knowledge implements Serializable {
 
         return new Knowledge();
     }
-    
+
     //Compare only id
 
     /**

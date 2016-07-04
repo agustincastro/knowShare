@@ -20,6 +20,9 @@ public class User implements Serializable{
     public static final String USER = "USER";
     public static final String ADMIN = "ADMIN";
 
+    // the source is valid if it filled its first evaluation form
+    protected boolean isValid;
+
     protected long id;
 
     private String name;
@@ -79,6 +82,15 @@ public class User implements Serializable{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Column(name = "is_valid", nullable = false)
+    public boolean isValid() {
+        return isValid;
+    }
+
+    public void setValid(boolean valid) {
+        isValid = valid;
     }
 
     @Column(name = "type", updatable = false, insertable = false, nullable = false)

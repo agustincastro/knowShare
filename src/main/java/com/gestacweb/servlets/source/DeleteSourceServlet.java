@@ -21,18 +21,9 @@ public class DeleteSourceServlet extends HttpServlet {
         LOG.debug("Inside delete source doGet");
 
         long sourceId = Long.parseLong(request.getParameter("id"));
-        Source source = (Source)DAOFactory.getDAO(DAOType.SOURCE).findById(userId);
-        source.isActive = false;
-        //User userToDelete = source;
-        //DAOFactory.getDAO(DAOType.USER).delete(userToDelete);
-
+        Source source = (Source)DAOFactory.getDAO(DAOType.SOURCE).findById(sourceId);
+        source.setValid(false);
+        DAOFactory.getDAO(DAOType.SOURCE).update(source);
         response.sendRedirect("managesources");
     }
-
-    @Override
-    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
-        LOG.debug("Inside delete problem doPost");
-        response.sendRedirect("managesources");
-    }
-
 }

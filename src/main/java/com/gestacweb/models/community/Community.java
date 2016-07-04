@@ -17,6 +17,11 @@ public class Community implements Serializable{
     private long id;
     private String name;
     private String description;
+    private boolean isValid;
+
+    public Community() {
+      isValid = true;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -42,10 +47,19 @@ public class Community implements Serializable{
         return description;
     }
 
+    @Column(name = "is_valid", nullable = false)
+    public boolean isValid() {
+        return isValid;
+    }
+
+    public void setValid(boolean valid) {
+        isValid = valid;
+    }
+
     public void setDescription(String description) {
         this.description = description;
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this.id == ((Community)obj).id)
@@ -62,5 +76,5 @@ public class Community implements Serializable{
         return hash;
     }
 
- 
+
 }
