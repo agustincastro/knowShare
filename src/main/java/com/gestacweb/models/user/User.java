@@ -2,6 +2,7 @@ package com.gestacweb.models.user;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import org.hibernate.annotations.Type;
 
 
 @Entity
@@ -11,7 +12,7 @@ import java.io.Serializable;
 @NamedQueries({
                 @NamedQuery(name = "findUserById", query = "select u from User u where u.id = :id"),
                 @NamedQuery(name = "findByEmail", query = "select u from User u where u.email = :email"),
-                @NamedQuery(name = "findAllUsers", query = "select u from User u")
+                @NamedQuery(name = "findAllUsers", query = "select u from User u where u.valid = true")
 })
 @DiscriminatorValue(User.USER)
 public class User implements Serializable{
@@ -21,7 +22,7 @@ public class User implements Serializable{
     public static final String ADMIN = "ADMIN";
 
     // the source is valid if it filled its first evaluation form
-    protected boolean isValid;
+    protected boolean valid;
 
     protected long id;
 
@@ -35,7 +36,9 @@ public class User implements Serializable{
 
     private String type;
 
-    public User() {}
+    public User() {
+      valid = true;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -84,13 +87,14 @@ public class User implements Serializable{
         this.password = password;
     }
 
-    @Column(name = "is_valid", nullable = false)
-    public boolean isValid() {
-        return isValid;
+    @Type(type = "true_false")
+    @Column(name = "valid", nullable = false)
+    public boolean getValid() {
+        return valid;
     }
 
     public void setValid(boolean valid) {
-        isValid = valid;
+        this.valid = valid;
     }
 
     @Column(name = "type", updatable = false, insertable = false, nullable = false)

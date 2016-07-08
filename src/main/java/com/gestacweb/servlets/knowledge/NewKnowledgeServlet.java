@@ -11,14 +11,13 @@ import org.apache.logging.log4j.Logger;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
-import java.util.List;
 import java.util.Set;
 
 
 @WebServlet(name = "NewKnowledgeServlet", urlPatterns = "/newknowledge")
 public class NewKnowledgeServlet extends HttpServlet{
 
-    private static Logger LOG = LogManager.getLogger(NewKnowledgeServlet.class);
+    private static final Logger LOG = LogManager.getLogger(NewKnowledgeServlet.class);
 
     @Override
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
@@ -76,7 +75,7 @@ public class NewKnowledgeServlet extends HttpServlet{
 
         DAOFactory.getDAO(DAOType.KNOWLEDGE).save(knowledge);
 
-        response.sendRedirect("manageknowledges");
+        response.sendRedirect("manageknowledge");
 
     }
 

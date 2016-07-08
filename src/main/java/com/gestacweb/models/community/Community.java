@@ -3,24 +3,24 @@ package com.gestacweb.models.community;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
+import org.hibernate.annotations.Type;
 
 
 @Entity
 @Table(name = "communities")
 @NamedQueries({
         @NamedQuery(name = "findCommunityById", query = "from Community c where c.id = :id"),
-        @NamedQuery(name = "findAllCommunities", query = "from Community c"),
+        @NamedQuery(name = "findAllCommunities", query = "from Community c where c.valid = true"),
 
 })
 public class Community implements Serializable{
-
     private long id;
     private String name;
     private String description;
-    private boolean isValid;
+    private boolean valid;
 
     public Community() {
-      isValid = true;
+      valid = true;
     }
 
     @Id
@@ -47,13 +47,14 @@ public class Community implements Serializable{
         return description;
     }
 
-    @Column(name = "is_valid", nullable = false)
-    public boolean isValid() {
-        return isValid;
+    @Type(type = "true_false")
+    @Column(name = "valid", nullable = false)
+    public boolean getValid() {
+        return valid;
     }
 
     public void setValid(boolean valid) {
-        isValid = valid;
+        this.valid = valid;
     }
 
     public void setDescription(String description) {

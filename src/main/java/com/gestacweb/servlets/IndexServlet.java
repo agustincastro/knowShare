@@ -3,7 +3,6 @@ package com.gestacweb.servlets;
 import com.gestacweb.models.DAOFactory;
 import com.gestacweb.models.DAOType;
 import com.gestacweb.models.knowledge.Knowledge;
-import com.gestacweb.models.knowledge.KnowledgeDAO;
 import com.gestacweb.models.problem.Problem;
 import com.gestacweb.models.problem.ProblemDAO;
 import com.gestacweb.models.source.Source;
@@ -48,9 +47,9 @@ public class IndexServlet extends HttpServlet{
         User user = ((UserDAO)DAOFactory.getDAO(DAOType.USER)).findByEmail(loggedUserName);
         if(user.getType() != null && user.getType().equals(WebConstants.SOURCE)){
             Source source = (Source) user;
-            request.getSession().setAttribute(WebConstants.SOURCE_RATED, source.isValid());
+            request.getSession().setAttribute(WebConstants.SOURCE_RATED, source.getValid());
             request.setAttribute(WebConstants.LOGGED_USER_ID, user.getId());
-            if(!source.isValid()){
+            if(!source.getValid()){
                 request.setAttribute(WebConstants.SOURCE, source);
                 response.sendRedirect("ratesource");
                 return;

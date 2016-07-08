@@ -22,7 +22,7 @@
         <li><a href="#"><i class="fa fa-suitcase">
         </i>Conocimientos &raquo;</a>
             <ul class="sub">
-                <li><a href="<c:url value='/manageknowledges'/>">Administrar Conocimientos</a></li>
+                <li><a href="<c:url value='/manageknowledge'/>">Administrar Conocimientos</a></li>
                 <c:if test="${sessionScope.LOGGED_USER_TYPE eq 'SOURCE'}">
                     <li><a href="<c:url value='/newknowledge'/>">Nuevo Conocimiento</a></li>
                 </c:if>

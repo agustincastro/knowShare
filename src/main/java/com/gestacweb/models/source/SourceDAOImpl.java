@@ -1,9 +1,8 @@
 package com.gestacweb.models.source;
 
 import com.gestacweb.models.BaseDAO;
-import com.gestacweb.models.area.Area;
 import com.gestacweb.utils.BCrypt;
-import com.gestacweb.utils.HibernateUtil;
+import java.util.ArrayList;
 import org.hibernate.Hibernate;
 import org.hibernate.Transaction;
 
@@ -36,7 +35,7 @@ public class SourceDAOImpl extends BaseDAO<Source> implements SourceDAO {
     @Override
     public Set<Source> getAll() {
         Transaction t = getSession().beginTransaction();
-        Set<Source> result = new LinkedHashSet<Source>(getSession().getNamedQuery("findAllSources").list());
+        Set<Source> result = new LinkedHashSet<>(getSession().getNamedQuery("findAllSources").list());
         for(Source source: result){
             Hibernate.initialize(source.getArea());
         }
@@ -47,9 +46,15 @@ public class SourceDAOImpl extends BaseDAO<Source> implements SourceDAO {
     @Override
     public List<Source> getMostRatedSources() {
         Transaction t = getSession().beginTransaction();
-        List<Source> result = getSession().getNamedQuery("findAllSourcesOrderByRating")
+        List<Source> result = new ArrayList<>();
+        try {
+                result = getSession().getNamedQuery("findAllSourcesOrderByRating")
                 .setMaxResults(5)
                 .list();
+        }
+        catch(StringIndexOutOfBoundsException e) {
+            
+        }
         t.commit();
         return result;
     }

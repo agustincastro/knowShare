@@ -9,13 +9,14 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
+import org.hibernate.annotations.Type;
 
 
 @Entity
 @Table(name = "knowledges")
 @NamedQueries({
         @NamedQuery(name = "findKnowledgeById", query = "select k from Knowledge k where k.id = :id"),
-        @NamedQuery(name = "findAllKnowledges", query = "select k from Knowledge k"),
+        @NamedQuery(name = "findAllKnowledges", query = "select k from Knowledge k where k.valid = true"),
         @NamedQuery(name = "findAllKnowledgesOrderByRating", query = "from Knowledge k order by k.rating desc"),
         @NamedQuery(name = "findKnowledgesThatSolvedProblem", query = "from Knowledge k where k.problem != null"),
         @NamedQuery(name = "findKnowledgesToImprove", query = "select k from Problem p, Knowledge k " +
@@ -39,10 +40,10 @@ public class Knowledge implements Serializable {
     private String videoUrl;
     private Source sourceCanImprove;
     private double rating;
-    private boolean isValid;
+    private boolean valid;
 
     public Knowledge() {
-      isValid = true;
+        valid = true;
     }
 
     @Id
@@ -149,16 +150,6 @@ public class Knowledge implements Serializable {
         this.createTime = createTime;
     }
 
-    /*
-    public Knowledge getParent() {
-        return parent;
-    }
-
-    public void setParent(Knowledge parent) {
-        this.parent = parent;
-    }
-    */
-
     @Column(name = "keywords", nullable = false)
     public String getKeywords() {
         return keywords;
@@ -192,13 +183,14 @@ public class Knowledge implements Serializable {
         return rating;
     }
 
-    @Column(name = "is_valid", nullable = false)
-    public boolean isValid() {
-        return isValid;
+    @Type(type = "true_false")
+    @Column(name = "valid", nullable = false)
+    public boolean getValid() {
+        return valid;
     }
 
     public void setValid(boolean valid) {
-        isValid = valid;
+        this.valid = valid;
     }
 
     public void setRating(double rating) {
@@ -218,13 +210,6 @@ public class Knowledge implements Serializable {
         return new Knowledge();
     }
 
-    //Compare only id
-
-    /**
-     *
-     * @param obj
-     * @return
-     */
     @Override
     public boolean equals(Object obj) {
         if (this.id == ((Knowledge)obj).id)

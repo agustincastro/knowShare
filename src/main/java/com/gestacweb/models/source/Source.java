@@ -15,12 +15,14 @@ import java.util.Set;
 @DiscriminatorValue(User.SOURCE)
 @NamedQueries({
         @NamedQuery(name = "findSourceById", query = "from Source s where s.id = :id"),
-        @NamedQuery(name = "findAllSources", query = "from Source s order by s.expertiseLevel desc"),
-        @NamedQuery(name = "findAllSourcesOrderByRating", query = "from Source s order by s.expertiseLevel desc ")
+        @NamedQuery(name = "findAllSources", query = "from Source s where s.valid = true order by s.expertiseLevel desc"),
+        @NamedQuery(name = "findAllSourcesOrderByRating", query = "from Source s where s.valid = true order by s.expertiseLevel desc ")
 })
 public class Source extends User{
 
-    public Source(){}
+    public Source(){
+        valid = true;
+    }
 
     private String description;
 
@@ -35,10 +37,6 @@ public class Source extends User{
 
 
     private Set<Knowledge> problemsToImprove;
-
-    public Source() {
-      isValid = true;
-    }
 
     @Column(name = "expertise_level", nullable = true)
     public double getExpertiseLevel() {

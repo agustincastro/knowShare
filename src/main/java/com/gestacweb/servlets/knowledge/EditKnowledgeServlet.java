@@ -93,7 +93,7 @@ public class EditKnowledgeServlet extends HttpServlet {
 
         DAOFactory.getDAO(DAOType.KNOWLEDGE).update(knowledge);
 
-        response.sendRedirect("manageknowledges");
+        response.sendRedirect("manageknowledge");
 
     }
 

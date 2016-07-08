@@ -21,22 +21,9 @@ public class DeleteAreaServlet extends HttpServlet {
         LOG.debug("Inside area delete doGet");
 
         long areaId = Long.parseLong(request.getParameter("id"));
-        Area area = (Area)DAOFactory.getDAO(DAOType.COMMUNITY).findById(areaId);
-        DAOFactory.getDAO(DAOType.COMMUNITY).delete(area);
-
-        response.sendRedirect("managearea");
+        Area area = (Area)DAOFactory.getDAO(DAOType.AREA).findById(areaId);
+        area.setValid(false);
+        DAOFactory.getDAO(DAOType.AREA).update(area);
+        response.sendRedirect("manageareas");
     }
-
-    @Override
-    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
-        LOG.debug("Inside area delete doGet");
-
-        long areaId = Long.parseLong(request.getParameter("id"));
-        Area area = (Area)DAOFactory.getDAO(DAOType.COMMUNITY).findById(areaId);
-        DAOFactory.getDAO(DAOType.COMMUNITY).delete(area);
-
-        response.sendRedirect("managearea");
-
-    }
-
 }

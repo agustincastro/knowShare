@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
+import org.hibernate.annotations.Type;
 
 /**
  * 11. Para registrar un Área se deberá ingresar: Nombre del área y una descripción de la misma.
@@ -14,7 +15,7 @@ import java.util.Set;
 @Table(name = "areas")
 @NamedQueries({
         @NamedQuery(name = "findAreaById", query = "select a from Area a where a.id = :id"),
-        @NamedQuery(name = "findAllAreas", query = "select a from Area a"),
+        @NamedQuery(name = "findAllAreas", query = "select a from Area a where a.valid = true"),
 
 })
 public class Area implements Serializable{
@@ -23,10 +24,10 @@ public class Area implements Serializable{
     private String name;
     private String description;
     private Set<Source> sources;
-    private boolean isValid;
+    private boolean valid;
 
     public Area() {
-      isValid = true;
+      valid = true;
     }
 
     @Id
@@ -57,15 +58,15 @@ public class Area implements Serializable{
         this.description = description;
     }
 
-    @Column(name = "is_valid", nullable = false)
-    public boolean isValid() {
-        return isValid;
+    @Type(type = "true_false")
+    @Column(name = "valid", nullable = false)
+    public boolean getValid() {
+        return valid;
     }
 
     public void setValid(boolean valid) {
-        isValid = valid;
+        this.valid = valid;
     }
-
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "area")
     @OrderBy("expertiseLevel desc")

@@ -17,26 +17,13 @@ public class DeleteKnowledgeServlet extends HttpServlet {
 
     @Override
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
-        LOG.debug("Inside delete doGet");
+        LOG.debug("Inside delete problem doGet");
 
         long knowledgeId = Long.parseLong(request.getParameter("id"));
         Knowledge knowledge = (Knowledge)DAOFactory.getDAO(DAOType.KNOWLEDGE).findById(knowledgeId);
-        DAOFactory.getDAO(DAOType.KNOWLEDGE).delete(knowledge);
-
+        knowledge.setValid(false);
+        DAOFactory.getDAO(DAOType.PROBLEM).update(knowledge);
         response.sendRedirect("manageknowledge");
-    }
-
-    @Override
-    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
-        LOG.debug("Inside delete doPost");
-
-        long knowledgeId = Long.parseLong(request.getParameter("id"));
-        Knowledge knowledge = (Knowledge)DAOFactory.getDAO(DAOType.KNOWLEDGE).findById(knowledgeId);
-        
-        DAOFactory.getDAO(DAOType.KNOWLEDGE).delete(knowledge);
-
-        response.sendRedirect("manageknowledge");
-
     }
 
 }

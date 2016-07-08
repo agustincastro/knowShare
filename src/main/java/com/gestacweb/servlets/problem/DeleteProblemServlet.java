@@ -21,21 +21,8 @@ public class DeleteProblemServlet extends HttpServlet {
 
         long problemId = Long.parseLong(request.getParameter("id"));
         Problem problem = (Problem)DAOFactory.getDAO(DAOType.PROBLEM).findById(problemId);
-        DAOFactory.getDAO(DAOType.PROBLEM).delete(problem);
-
-        response.sendRedirect("manageknowledge");
+        problem.setValid(false);
+        DAOFactory.getDAO(DAOType.PROBLEM).update(problem);
+        response.sendRedirect("manageproblems");
     }
-
-    @Override
-    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
-        LOG.debug("Inside delete problem doPost");
-
-        long problemId = Long.parseLong(request.getParameter("id"));
-        Problem problem = (Problem)DAOFactory.getDAO(DAOType.PROBLEM).findById(problemId);
-        DAOFactory.getDAO(DAOType.PROBLEM).delete(problem);
-
-        response.sendRedirect("manageknowledge");
-
-    }
-
 }

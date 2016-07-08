@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Set;
 
 
-@WebServlet(name = "ManageKnowledgeServlet", urlPatterns = "/manageknowledges")
+@WebServlet(name = "ManageKnowledgeServlet", urlPatterns = "/manageknowledge")
 public class ManageKnowledgeServlet extends HttpServlet {
 
     private static Logger LOG = LogManager.getLogger(ManageKnowledgeServlet.class);
@@ -21,16 +21,6 @@ public class ManageKnowledgeServlet extends HttpServlet {
     @Override
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
         LOG.debug("Inside doGet");
-
-        /*
-        // get all problems to be shown on select input
-        List problemsList = DAOFactory.getDAO(DAOType.PROBLEM).getAll();
-        request.setAttribute(WebConstants.PROBLEMS_LIST, problemsList);
-
-        // get all sources to be shown on select input
-        List sourcesList = DAOFactory.getDAO(DAOType.SOURCE).getAll();
-        request.setAttribute(WebConstants.SOURCES_LIST, sourcesList);
-        */
 
         Set<Knowledge> knowledgeList = DAOFactory.getDAO(DAOType.KNOWLEDGE).getAll();
         request.setAttribute(WebConstants.KNOWLEDGES_LIST, knowledgeList);

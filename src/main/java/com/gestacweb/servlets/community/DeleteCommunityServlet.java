@@ -21,21 +21,9 @@ public class DeleteCommunityServlet extends HttpServlet {
 
         long communityId = Long.parseLong(request.getParameter("id"));
         Community community = (Community)DAOFactory.getDAO(DAOType.COMMUNITY).findById(communityId);
-        DAOFactory.getDAO(DAOType.COMMUNITY).delete(community);
-
-        response.sendRedirect("managecommunity");
-    }
-
-    @Override
-    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
-        LOG.debug("Inside community delete doGet");
-
-        long communityId = Long.parseLong(request.getParameter("id"));
-        Community community = (Community)DAOFactory.getDAO(DAOType.COMMUNITY).findById(communityId);
-        DAOFactory.getDAO(DAOType.COMMUNITY).delete(community);
-
-        response.sendRedirect("managecommunity");
-
+        community.setValid(false);
+        DAOFactory.getDAO(DAOType.COMMUNITY).update(community);
+        response.sendRedirect("managecommunities");
     }
 
 }

@@ -9,13 +9,14 @@ import org.codehaus.jettison.json.JSONObject;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
+import org.hibernate.annotations.Type;
 
 
 @Entity
 @Table(name = "problems")
 @NamedQueries({
         @NamedQuery(name = "findProblemById", query = "from Problem p where p.id = :id"),
-        @NamedQuery(name = "findAllProblems", query = "from Problem p"),
+        @NamedQuery(name = "findAllProblems", query = "from Problem p where p.valid = true"),
         /*@NamedQuery(name = "findUnsolvedProblems", query = "from Problem p " +
                 "where p.id not in (select p1.id from Problem p1, Source s where p.area = s.area) " +
                 "and p.id not in (select distinct k.problem.id from Knowledge k)"),
@@ -29,7 +30,9 @@ import java.util.List;
 })
 public class Problem implements Serializable{
 
-    public Problem(){}
+    public Problem(){
+        valid = true;
+    }
 
     private long id;
     private String title;
@@ -37,11 +40,8 @@ public class Problem implements Serializable{
     private Area area;
     private List<Knowledge> knowledges;
     private Source bestSourceToSolveProblem;
-    private boolean isValid;
+    private boolean valid;
 
-    public Problem() {
-      isValid = true;
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -92,14 +92,16 @@ public class Problem implements Serializable{
         return bestSourceToSolveProblem;
     }
 
-    @Column(name = "is_valid", nullable = false)
-    public boolean isValid() {
-        return isValid;
+    @Type(type = "true_false")
+    @Column(name = "valid", nullable = false)
+    public boolean getValid() {
+        return valid;
     }
 
     public void setValid(boolean valid) {
-        isValid = valid;
+        this.valid = valid;
     }
+
 
     public void setBestSourceToSolveProblem(Source bestSourceToSolveProblem) {
         this.bestSourceToSolveProblem = bestSourceToSolveProblem;

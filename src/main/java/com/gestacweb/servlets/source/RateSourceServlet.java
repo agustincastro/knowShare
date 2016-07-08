@@ -81,7 +81,7 @@ public class RateSourceServlet extends HttpServlet {
 
         DAOFactory.getDAO(DAOType.SOURCE).update(source);
 
-        request.getSession().setAttribute(WebConstants.SOURCE_RATED, source.isValid());
+        request.getSession().setAttribute(WebConstants.SOURCE_RATED, source.getValid());
 
         response.sendRedirect("managesources");
 
