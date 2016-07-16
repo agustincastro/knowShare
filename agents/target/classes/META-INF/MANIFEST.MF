@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: gestac-lib.jar
+Main-Class: agents.AgentsRunner
+

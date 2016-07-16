@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*! Remodal - v0.1.2 - 2014-03-05
+ * https://github.com/VodkaBears/remodal
+ * Copyright (c) 2014 VodkaBears; */
+
+html.remodal_lock,
+body.remodal_lock {
+	overflow: hidden;
+}
+
+.remodal,
+[data-remodal-id] {
+	visibility: hidden;
+}
+
+.remodal-overlay {
+	display: none;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10000;
+	text-align: center;
+	opacity: 0;
+	background: rgba(33, 36, 46, .95);
+	-webkit-transition: opacity .2s linear;
+	-moz-transition: opacity .2s linear;
+	-o-transition: opacity .2s linear;
+	transition: opacity .2s linear;
+}
+
+.remodal-overlay > * {
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+.remodal-overlay:after {
+	display: inline-block;
+	height: 100%;
+	margin-left: -.05em;
+	content: '';
+	vertical-align: middle;
+}
+
+body.remodal_active .remodal-overlay {
+	opacity: 1;
+}
+
+.remodal {
+	font-size: 1em;
+	position: relative;
+	display: inline-block;
+	background-clip: padding-box;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: middle;
+	padding: 0;
+	background: #fafafa;
+	color: #585858;
+	-webkit-box-shadow: 0 0 .5em #171a24;
+	box-shadow: 0 0 .5em #171a24;
+	-webkit-transform: scale(.95);
+	-moz-transform: scale(.95);
+	-ms-transform: scale(.95);
+	-o-transform: scale(.95);
+	transform: scale(.95);
+	-webkit-transition: -webkit-transform .2s linear;
+	-moz-transition: -moz-transform .2s linear;
+	-o-transition: -o-transform .2s linear;
+	transition: transform .2s linear;
+}
+
+@media only screen and (min-width: 40.063em) {
+
+	.remodal {
+		/* 600px */
+		max-width: 37.5em;
+		/* 20px */
+		margin: 1.25em auto;
+	}
+
+}
+
+body.remodal_active .remodal {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.remodal-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	/* 28px */
+	width: 1.75em;
+	/* 28px */
+	height: 1.75em;
+	text-decoration: none;
+}
+
+.remodal-close:after {
+	display: block;
+	/* 28px */
+	font-size: 1.75em;
+	font-family: Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+	content: "Ã—";
+	/* 28px (28px) */
+	line-height: 1em;
+	cursor: pointer;
+	text-decoration: none;
+	color: #585858;
+}
+
+.remodal-close:hover.remodal-close:after {
+	color: #333;
+}
+
+.remodal__title {
+	/* 10px (22px) */
+	padding: .455em .455em 0;
+	/* 22px */
+	font-size: 1.375em;
+	margin: 0;
+}
+
+.remodal__content {
+	/* 10px */
+	padding: .625em;
+	overflow: hidden;
+	text-align: left;
+}
+
+.remodal__footer {
+	/* 10px */
+	padding: .625em;
+	overflow: hidden;
+	background: #e0e0e0;
+	border-top: 1px solid #ccc;
+}
+
+.remodal__footer a {
+	/* 10px */
+	margin-left: .625em;
+	float: right;
+}
+

@@ -1,7 +1,3 @@
-out/
-target/
 *.class
 *.log
 *.txt
-.DS_Store
-/GestacDependencies/nbproject/private/
