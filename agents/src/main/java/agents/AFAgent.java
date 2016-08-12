@@ -1,10 +1,10 @@
 package agents;
 
-import com.gestacweb.models.DAOFactory;
-import com.gestacweb.models.DAOType;
-import com.gestacweb.models.problem.Problem;
-import com.gestacweb.models.problem.ProblemDAO;
-import com.gestacweb.models.source.Source;
+import com.knowshare.models.DAOFactory;
+import com.knowshare.models.DAOType;
+import com.knowshare.models.problem.Problem;
+import com.knowshare.models.problem.ProblemDAO;
+import com.knowshare.models.source.Source;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;

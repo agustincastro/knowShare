@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="gestac-agents">
-    <output-path>$PROJECT_DIR$/deploy/jar</output-path>
-    <root id="archive" name="gestac-agents.jar">
-      <element id="module-output" name="agents" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/agents/lib/jade/lib/jade.jar" path-in-jar="/" />
-    </root>
-  </artifact>
-</component>

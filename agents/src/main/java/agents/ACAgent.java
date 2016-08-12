@@ -1,10 +1,10 @@
 package agents;
 
-import com.gestacweb.models.DAOFactory;
-import com.gestacweb.models.DAOType;
-import com.gestacweb.models.knowledge.Knowledge;
-import com.gestacweb.models.problem.Problem;
-import com.gestacweb.utils.HibernateUtil;
+import com.knowshare.models.DAOFactory;
+import com.knowshare.models.DAOType;
+import com.knowshare.models.knowledge.Knowledge;
+import com.knowshare.models.problem.Problem;
+import com.knowshare.utils.HibernateUtil;
 import jade.core.AID;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.core.behaviours.TickerBehaviour;
