@@ -1,0 +1,15 @@
+{
+  "name": "knowShare",
+  "version": "0.0.1",
+  "description": "Sets of tasks to build maven web app",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Santiago Varela",
+  "license": "ISC",
+  "dependencies": {
+    "tomcatjs": "^0.1.0"
+  }
+}

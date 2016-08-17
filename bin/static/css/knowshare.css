@@ -1,0 +1,17 @@
+.edit-url{
+    background: transparent url(../img/icon-edit-green.png) center left no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.hidden{
+    display: none;
+}
+
+.left{
+    float: left;
+}
+
+.required{
+    color: red;
+}
