@@ -8,7 +8,7 @@
             <div class="wrapper">
                 <ul class="login">
                     <li class="copy">
-                        <p><strong>KNOWSHARE</strong>, la Plataforma para el manejo de Conocimientos Tácitos de su Organización.
+                        <p><strong>KNOWSHARE CHNAAAGEEEEEE</strong>, la Plataforma para el manejo de Conocimientos Tácitos de su Organización.
                         </p>
                         <ul>
                             <li>
