@@ -7,26 +7,26 @@
 
 <t:template>
     <t:nav/>
- 
+
     <section class="content">
         <!--Carga de datos para nuevo Usuario Fuente-->
         <div class="wrapper">
-        <h3><i class="fa fa-user fa-2x"></i> :: :: Datos de la Fuente</h3>
+        <h3><i class="fa fa-user fa-2x"></i> :: :: Source's Data</h3>
 
             <!--
         <form class="forms" id="datosPersonales" enctype="multipart/form-data" method="post" action="people-information_w.w">
         -->
 
             <div>
-                <label class="mid" for="nombre">Nombres
+                <label class="mid" for="nombre">Name
                     <a>${user.name}</a>
                 </label>
                 <br/>
-                <label class="mid" for="apellido">Apellidos
+                <label class="mid" for="apellido">Surname
                     <a>${user.lastName}</a>
                 </label>
                 <br/>
-                <label for="email">Email
+                <label for="email">Email Address
                     <a>${user.email}</a>
                 </label>
             </div>
@@ -49,7 +49,7 @@
                 -->
 
 
-    
+
 
     <!------------------------------
             <ul>

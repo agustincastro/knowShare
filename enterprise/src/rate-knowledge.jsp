@@ -10,7 +10,7 @@
     <section class="content">
         <!-- Descripcion Inicial de conocimiento Fuente y Ponderacion actual de los mismos-->
         <div class="wrapper">
-            <h3>Conocimiento Tácito</h3>
+            <h3>Tacit Knowledge</h3>
             <div class="item-view">
                 <div class="item-view__product">
                     <div style="color:rgb(32,178,170)" class="item-box__visual">
@@ -20,11 +20,11 @@
                 <!-- / Inicio informacion de nombres de FUENTES que aportaron el conocimiento -->
                 <div class="item-view__details">
                     <div class="item-view__profile">
-                    <span class="item-view__label">Nombre de la Fuente que aportó el conocimiento</span>
+                    <span class="item-view__label">Source with Tacit Knowledge</span>
                     <a href="editsource?id=${knowledge.sourceWithKnowledge.id}">${knowledge.sourceWithKnowledge.name}</a>
                     </div>
                     <div class="item-view__profile">
-                        <span class="item-view__label">Nombre de la Fuente que escribió el Conocimiento Tácito</span>
+                        <span class="item-view__label">Source that LINKED Knowledge</span>
                         <a href="editsource?id=${knowledge.sourceWithKnowledge.id}">${knowledge.sourceWhoWrote.name}</a>
                     </div>
                 </div>
@@ -34,40 +34,40 @@
             <!-- / Descripcion principal del conocimiento y problema que soluciona, se dan mas datos de la Fuente. -->
             <div class="item-view__description">
                 <ul class="item-view__fields">
-                    <li class="item-view__field-title">Titulo del Conocimiento Tácito</li>
+                    <li class="item-view__field-title">Tacit Knowledge Title</li>
                     <li class="item-view__field-content">${knowledge.title}</li>
-                    <li class="item-view__field-title">Tipo de Problema que resuelve</li>
+                    <li class="item-view__field-title">Problem Type it solves</li>
                     <li class="item-view__field-content"><a href="<c:url value='editproblem?id=${knowledge.problem.id}'/>">${knowledge.problem.title}</a></li>
-                    <li class="item-view__field-title">Correo electrónico de la Fuente</li>
+                    <li class="item-view__field-title">Source's email address</li>
                     <li class="item-view__field-content"><a href="mailto:${knowledge.sourceWithKnowledge.email}" target="_blank">${knowledge.sourceWithKnowledge.email}</a></li>
                 </ul>
             </div>
             <!-- / FIN de descripcion principal del conocimiento y problema que soluciona, se dan mas datos de la Fuente -->
 
             <fieldset style="height:300px">
-                <h3>Reporte sobre el Conocimiento</h3>
+                <h3>Knowledge report</h3>
                 <div class="item-view__profile">
-                    <span class="item-view__label">Reuso del Conocimiento</span>
+                    <span class="item-view__label">Knowledge Reusability</span>
                     <a>${knowledge.usageFrecuency}</a>
                 </div>
                 <div class="item-view__profile">
-                    <span class="item-view__label">Veracidad del Conocimiento</span>
+                    <span class="item-view__label">Knowledge Truthfulness</span>
                     <a>${knowledge.veracity}</a>
                 </div>
                 <div class="item-view__profile">
-                    <span class="item-view__label">Tiempo</span>
+                    <span class="item-view__label">Time</span>
                     <a>${knowledge.timeToSolved}</a>
                 </div>
                 <br>
                 <div class="item-view__profile">
-                    <span class="item-view__label">Nivel de Seguridad de Fuente</span>
+                    <span class="item-view__label">Source Rating</span>
                     <a>${knowledge.sourceWithKnowledge.expertiseLevel}</a>
                 </div>
             </fieldset>
             <!-- FIN de Descripcion Inicial de conocimiento Fuente y Ponderacion actual de los mismos-->
 
             <!-- Comienzo de Descripcion del conocimiento tacito que da solucion al problema-->
-            <a>Descripción</a>
+            <a>Description</a>
             <fieldset style="overflow:auto; padding: 1em; margin: .5em 5.5em .5em .5em; height:220px">
                 ${knowledge.description}
             </fieldset>
@@ -79,61 +79,61 @@
                 <ul>
                     <c:if test="${not (sessionScope.LOGGED_USER_TYPE eq 'USER')}">
                     <input type="hidden" name="source_id" value="${knowledge.sourceWithKnowledge.id}"/>
-                    <h3>Ponderación de la Fuente</h3>
+                    <h3>Source Rating</h3>
                     <fieldset>
                         <!-- Comienzo de area de ponderacion del Nivel de Experiencia en la Interacción de la Fuente -->
-                        <legend>Experiencia de trabajo</legend>
+                        <legend>Work Experience</legend>
                         <ol>
                             <li>
                                 <fieldset>
-                                    <legend>¿Cómo le resulto la explicación del conocimiento?</legend>
+                                    <legend>Rate Knowledge Explanation</legend>
                                     <ol>
                                         <li>
                                             <input id="very_good" name="question_1" type=radio value="1">
-                                            <label for="very_good">MUY BUENA EXPLICACIÓN</label>
+                                            <label for="very_good">EXCELLENT EXPLANATION</label>
                                         </li>
                                         <li>
                                             <input id="good" name="question_1" type=radio value="0.75">
-                                            <label for="good">BUENA EXPLICACIÓN</label>
+                                            <label for="good">GOOD EXPLANATION</label>
                                         </li>
                                         <li>
                                             <input id=regular name="question_1" type=radio value="0.5">
-                                            <label for=regular>REGULAR</label>
+                                            <label for=regular>REGULAR EXPLANATION</label>
                                         </li>
                                         <li>
                                             <input id="below_regular" name="question_1" type=radio value="0.25">
-                                            <label for="below_regular">MALO EXPLICANDO</label>
+                                            <label for="below_regular">BAD EXPLANATION</label>
                                         </li>
                                         <li>
                                             <input id="poor" name="question_1" type=radio value="0">
-                                            <label for="poor">MUY MALO EXPLICANDO</label>
+                                            <label for="poor">VERY POOR EXPLANATION</label>
                                         </li>
                                     </ol>
                                 </fieldset>
                             </li>
                             <li>
                                 <fieldset>
-                                    <legend>¿Cuál fue la disposición y motivación de la Fuente?</legend>
+                                    <legend>Source motivation and availability?</legend>
                                     <ol>
                                         <li>
                                             <input id="completely_agree" name="question_2" type=radio value="1">
-                                            <label for="completely_agree">MUY BUENA</label>
+                                            <label for="completely_agree">AWESOME</label>
                                         </li>
                                         <li>
                                             <input id="agree" name="question_2" type=radio value="0.75">
-                                            <label for="agree">BUENA</label>
+                                            <label for="agree">GOOD</label>
                                         </li>
                                         <li>
                                             <input id="medium" name="question_2" type=radio value="0.5">
-                                            <label for="medium">MEDIO</label>
+                                            <label for="medium">REGULAR</label>
                                         </li>
                                         <li>
                                             <input id="bad" name="question_2" type=radio value="0.25">
-                                            <label for="bad">MALO</label>
+                                            <label for="bad">POOR</label>
                                         </li>
                                         <li>
                                             <input id="very_bad" name="question_2" type=radio value="0">
-                                            <label for="very_bad">MUY MALO</label>
+                                            <label for="very_bad">REALLY POOR</label>
                                         </li>
                                     </ol>
                                 </fieldset>
@@ -143,32 +143,32 @@
                     <!--fin de area de ponderacion del Nivel de Experiencia en la Interacción de la Fuente-->
                     <!--Comienzo de area de ponderacion del Nivel de conocimientos transmitidos de la Fuente-->
                     <fieldset>
-                        <legend>Nivel de conocimientos</legend>
+                        <legend>Knowledge Level</legend>
                         <ol>
                             <li>
                                 <fieldset>
-                                    <legend>¿En qué nivel de conocimientos asociaría a la fuente que brindo el conocimiento?</legend>
+                                    <legend>How do you consider the Source's Knowledge level?</legend>
                                     <ol>
                                         <li>
                                             <input id="rookie" name="question_3" type=radio value="0">
-                                            <label for="rookie">NOVATO</label>
+                                            <label for="rookie">NOVICE</label>
                                         </li>
                                         <li>
                                             <input id="beginner" name="question_3" type=radio value="0.25">
-                                            <label for="beginner">PRINCIPIANTE</label>
+                                            <label for="beginner">BEGINNER</label>
                                         </li>
                                         <li>
                                             <input id="competent" name="question_3" type=radio value="0.5">
-                                            <label for="competent">COMPETENTE</label>
+                                            <label for="competent">COMPETENT</label>
                                         </li>
 
                                         <li>
                                             <input id="expert" name="question_3" type=radio value="0.75">
-                                            <label for="expert">EXPERTO</label>
+                                            <label for="expert">EXPERT</label>
                                         </li>
                                         <li>
                                             <input id="master" name="question_3" type=radio value="1">
-                                            <label for="master">MAESTRO</label>
+                                            <label for="master">MASTERFUL</label>
                                         </li>
 
                                     </ol>
@@ -181,22 +181,22 @@
                 </c:if>
                 <!-- cuandro de ponderacion del conocimiento cosumido-->
                 <ul>
-                    <h3>Ponderación del Conocimiento Tácito.</h3>
+                    <h3>Tacit Knowledge Rating.</h3>
                     <fieldset>
-                    <legend>Reuso del Conocimiento</legend>
+                    <legend>Knowledge reusability</legend>
                     <ol>
                         <li>
                             <fieldset>
-                                <legend>¿Considera que el conocimiento se usa con frecuencia?</legend>
+                                <legend>How do you consider the Knowledge's usage?</legend>
                                 <ol>
                                     <label for="reuse">Reúso
                                         <select id="reuse" name="usage_frequency" size="1" title="Considera que este conocimiento se usa:">
-                                            <option value="0" <c:if test="${knowledge.usageFrecuency eq 0}">selected</c:if>>Seleccionar</option>
-                                            <option value="0" <c:if test="${knowledge.usageFrecuency eq 0}">selected</c:if>>NO SE USA:: EL CONOCIMIENTO SE USA CADA MÁS DE 1 AÑO</option>
-                                            <option value="0.25" <c:if test="${knowledge.usageFrecuency eq 0.25}">selected</c:if>>USO BAJO:: EL CONOCIMIENTO SE USA AL MENOS 1 VEZ POR AÑO</option>
-                                            <option value="0.5" <c:if test="${knowledge.usageFrecuency eq 0.5}">selected</c:if>>USO BASICO:: EL CONOCIMIENTO SE USA AL MENOS 1 VEZ POR MES</option>
-                                            <option value="0.75" <c:if test="${knowledge.usageFrecuency eq 0.75}">selected</c:if>>USO MEDIO::EL CONOCIMIENTO SE USA AL MENOS 1 VEZ CADA 15 DÍAS</option>
-                                            <option value="1" <c:if test="${knowledge.usageFrecuency eq 1}">selected</c:if>>MUCHO USO:: EL CONOCIMIENTO SE APLICA AL MENOS 1 VEZ POR SEMANA</option>
+                                            <option value="0" <c:if test="${knowledge.usageFrecuency eq 0}">selected</c:if>>Select</option>
+                                            <option value="0" <c:if test="${knowledge.usageFrecuency eq 0}">selected</c:if>>NOT USED:: KNOWLEDGE USED MAXIMUM ONCE A YEAR</option>
+                                            <option value="0.25" <c:if test="${knowledge.usageFrecuency eq 0.25}">selected</c:if>>LOW USE:: KNOWLEDGE USED MORE THAN ONCE A YEAR</option>
+                                            <option value="0.5" <c:if test="${knowledge.usageFrecuency eq 0.5}">selected</c:if>>MEDIUM USE:: KNOWLEDGE USED AT LEAST THAN ONCE A MONTH</option>
+                                            <option value="0.75" <c:if test="${knowledge.usageFrecuency eq 0.75}">selected</c:if>>RELEVANT USE:: KNOWLEDGE USED AT EVERY TWO WEEKS</option>
+                                            <option value="1" <c:if test="${knowledge.usageFrecuency eq 1}">selected</c:if>>VERY RELEVANT USE:: KNOWLEDGE USED EVERY WEEK</option>
                                         </select>
                                     </label>
                                 </ol>
@@ -206,18 +206,18 @@
                     </fieldset>
 
                     <fieldset>
-                        <legend>Veracidad del conocimiento</legend>
+                        <legend>Knowledge Truthfulness</legend>
                         <ol>
                             <li>
                                 <fieldset>
-                                    <legend>¿Cómo resolvió el problema utilizando el conocimiento?</legend>
+                                    <legend>¿How did you resolve your problem with the concerning Knowledge?</legend>
                                     <ol>
-                                        <label for="veracidad">Veracidad del Conocimiento.
-                                            <select id="veracidad" name="veracity" size="1" title="Considera que para aplicar este conocimiento se debera de recurrir a la fuente:" required>
-                                                <option value="0" <c:if test="${knowledge.veracity eq 0}">selected</c:if>>Seleccionar</option>
-                                                <option value="0" <c:if test="${knowledge.veracity eq 0.25}">selected</c:if>>EL PROBLEMA NO SE RESOLVIÓ UTILIZANDO EL CONOCIMIENTO ESCRITO, SE DEBIÓ CONSULTAR A LA FUENTE DE CONOCIMIENTO PARA RESOLVER EL PROBLEMA Y LUEGO SE RESOLVIÓ</option>
-                                                <option value="0.5" <c:if test="${knowledge.veracity eq 0.5}">selected</c:if>>EL PROBLEMA NO SE RESOLVIÓ UTILIZANDO EL CONOCIMIENTO ESCRITO, SE DEBIÓ CONSULTAR A LA FUENTE QUE EXPLICITÓ EL CONOCIMIENTO Y LUEGO SE RESOLVIÓ</option>
-                                                <option value="1" <c:if test="${knowledge.veracity eq 1}">selected</c:if>>SE RESOLVIÓ EL PROBLEMA UTILIZANDO EL CONOCIMIENTO</option>
+                                        <label for="veracidad">Knowledge Veracity.
+                                            <select id="veracidad" name="veracity" size="1" title="Does the source need to be contacted:" required>
+                                                <option value="0" <c:if test="${knowledge.veracity eq 0}">selected</c:if>>Select</option>
+                                                <option value="0" <c:if test="${knowledge.veracity eq 0.25}">selected</c:if>>PROBLEM NOT RESOLVED WITH WRITTEN KNOWLEDGE, KNOWLEDGE SOURCE HAD TO BE CONTACTED TO RESOLVE THE PROBLEM</option>
+                                                <option value="0.5" <c:if test="${knowledge.veracity eq 0.5}">selected</c:if>>PROBLEM NOT RESOLVED WITH WRITTEN KNOWLEDGE, KNOWLEDGE SOURCE HAD TO BE CONTACTED TO CLARIFY ITS KNOWLEDGE TO THEN RESOLVE THE PROBLEM</option>
+                                                <option value="1" <c:if test="${knowledge.veracity eq 1}">selected</c:if>>PROBLEM WAS RESOLVED WITH WRITTEN KNOWLEDGE</option>
                                             </select>
                                         </label>
                                     </ol>
@@ -227,20 +227,20 @@
                     </fieldset>
 
                     <fieldset>
-                        <legend>Tiempo de resolución</legend>
+                        <legend>Resolution time</legend>
                         <ol>
                             <li>
                                 <fieldset>
-                                <legend>Sabiendo que el tiempo de resolución es X, ¿Cuánto demoró en solucionar el problema teniendo en cuenta el tiempo de resolución inicial?</legend>
+                                <legend>How long did it take for you to solve your proble using this Knowledge?</legend>
                                     <ol>
-                                        <label for="tiemporesolucion">Tiempo estimado de resolución
-                                            <select id="tiemporesolucion" name="time_to_solved" size="1" title="¿En cuanto tiempo considera que se puede aplicar exitosamente este conocimiento?" required>
-                                                <option value="0" <c:if test="${knowledge.timeToSolved eq 0}">selected</c:if>>Seleccionar</option>
-                                                <option value="0" <c:if test="${knowledge.timeToSolved eq 0}">selected</c:if>>NO PUDO RESOLVER EL PROBLEMA</option>
-                                                <option value="0.25" <c:if test="${knowledge.timeToSolved eq 0}">selected</c:if>>RESOLVIÓ EL PROBLEMA UTILIZANDO  DEL TIEMPO INICIAL CUADRIPLICANDO EL TIEMPO INICIAL</option>
-                                                <option value="0.5" <c:if test="${knowledge.timeToSolved eq 0.25}">selected</c:if>>RESOLVIÓ EL PROBLEMA UTILIZANDO MÁS DEL DOBLE DEL TIEMPO INICIAL</option>
-                                                <option value="0.75" <c:if test="${knowledge.timeToSolved eq 0.5}">selected</c:if>>RESOLVIÓ EL PROBLEMA UTILIZANDO MENOS DEL  DOBLE DEL TIEMPO INICIAL</option>
-                                                <option value="1" <c:if test="${knowledge.timeToSolved eq 1}">selected</c:if>>RESOLVIÓ EL PROBLEMA UTILIZANDO EL TIEMPO INICIAL</option>
+                                        <label for="tiemporesolucion">Estimated resolution time
+                                            <select id="tiemporesolucion" name="time_to_solved" size="1" title="How long does it take to successfully apply this Knowledge?" required>
+                                                <option value="0" <c:if test="${knowledge.timeToSolved eq 0}">selected</c:if>>Select</option>
+                                                <option value="0" <c:if test="${knowledge.timeToSolved eq 0}">selected</c:if>>COULD NOT RESOLVE PROBLEM</option>
+                                                <option value="0.25" <c:if test="${knowledge.timeToSolved eq 0}">selected</c:if>>PROBLEM SOLVED USING 4 TIMES THE ESTIMATED TIME</option>
+                                                <option value="0.5" <c:if test="${knowledge.timeToSolved eq 0.25}">selected</c:if>>PROBLEM SOLVED USING 2 TIMES THE ESTIMATED TIME</option>
+                                                <option value="0.75" <c:if test="${knowledge.timeToSolved eq 0.5}">selected</c:if>>PROBLEM SOLVED USING THE ESTIMATED TIME</option>
+                                                <option value="1" <c:if test="${knowledge.timeToSolved eq 1}">selected</c:if>>PROBLEM SOLVED UNDER THE ESTIMATED TIME</option>
                                             </select>
                                         </label>
                                     </ol>
@@ -250,10 +250,10 @@
                     </fieldset>
 
                     <li>
-                        <button class="publish">Cancelar</button>
+                        <button class="publish">Cancel</button>
                     </li>
                     <li class="clearfix">
-                        <button>Guardar</button>
+                        <button>Save</button>
                     </li>
                 </ul>
             </form>

@@ -14,13 +14,13 @@
         <section class="content">
             <!--Manejo de Problemas-->
             <div class="wrapper">
-                <h3><i class="fa fa-warning fa-2x"></i> :: :: Problemas a resolver</h3>
+                <h3><i class="fa fa-warning fa-2x"></i> :: :: Unsolved Problems</h3>
 
                 <table id="areasTable" class="fa-table">
                     <thead>
                         <th></th>
-                        <th>Nombre</th>
-                        <th>Fuentes que pueden resolver</th>
+                        <th>Name</th>
+                        <th>Possible solving Sources</th>
                     </thead>
                     <tbody>
                     <c:forEach items="${requestScope.UNSOLVED_PROBLEMS}" var="problem">
@@ -36,12 +36,12 @@
                             <td>
                                 <c:choose>
                                     <c:when test="${empty problem.area.sources}">
-                                       <span>No existe fuente que pueda resolver este problema</span>
+                                       <span>No source found to solve this problem</span>
                                     </c:when>
                                    <c:otherwise>
                                        <select id="select-source">
 
-                                           <option value="0" selected>Elegir fuente</option>
+                                           <option value="0" selected>Choose source</option>
                                            <c:forEach items="${problem.area.sources}" var="source">
                                                <option value="${source.id}">${source.name}</option>
                                            </c:forEach>

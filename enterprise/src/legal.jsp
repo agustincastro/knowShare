@@ -5,37 +5,35 @@
 
     <section class="main">
         <div class="wrapper">
-            <h3>Política de uso y privacidad</h3>
-            <h4>1. Términos y condiciones generales</h4>
-            <ol class="list-lower-alpha">
-                <li>La utilización de los servicios de la plataforma GESTAC le atribuye la condición de Usuario a quienes se tengan ingreso a la misma. En el momento de acceder el usuario acepta plenamente y sin reservas todas y cada una de las disposiciones incluidas en esta Política de Privacidad y Uso, así como a las condiciones legales o contractuales aplicables.</li>
-                <li>El Usuario debe leer atentamente la presente Política, su desconocimiento no exime al Usuario de las consecuencias o acciones que se deriven de la violación a la misma. Esta Política puede sufrir modificaciones.</li>
-                <li>La presente Política es aplicable a toda persona física, jurídica, entidad pública, estatal o no, que acceda, descargue, utilice, modifique, reutilice y/o redistribuya información contenida en la Plataforma GESTAC, directamente o a través de una aplicación informática. Esta Política vinculará a cualquier Usuario por el mero hecho de hacer uso de los contenidos e información de la Plataforma.</li>
-            </ol>
-            <h4>2. Condiciones de acceso y utilización</h4>
-            <ol class="list-lower-alpha">
-                <li>Los Usuarios se obligan a hacer un uso ético y dentro del marco legal aplicable de la Plataforma GESTAC y sus contenidos, respetando las buenas costumbres y el orden público, comprometiéndose en todos los casos a no causar daños a la propia Plataforma, a las personas que la integran asi como a objetos de conocimientos registrados.</li>
-                <li>A tal efecto, el Usuario se abstendrá de utilizar cualquiera de los servicios o información de la Plataforma GESTAC, con fines o efectos ilícitos, prohibidos en la presente Política, lesivos de los derechos e intereses de terceros, o que de cualquier forma puedan dañar, inutilizar, sobrecargar, deteriorar o impedir la normal utilización de los servicios proporcionados a través de la misma.</li>
-            </ol>
-            <h4>3. Finalidad sobre la información personal</h4>
-            <ol class="list-lower-alpha">
-                <li>La información personal que Ud. proporcione será utilizada con la finalidad de brindar un mejor servicio y hacer viables ciertas funcionalidades nativas en la Plataforma.</li>
-                <li>La recolección y tratamiento de datos realizado mediante mecanismos automatizados con el objeto de generar registros de actividad de los usuarios de la Plataforma, en ningún caso conllevará operaciones que permitan a otros usuarios, salvo los administradores, asociar dicha información al usuario referido, ya sea por mención explícita o que pudiera ser identificable su identidad por el conjunto y perfil de los datos conocidos o accedidos.</li>
-
-            </ol>
-            <h4>4. Marco normativo</h4>
-            <ol class="list-lower-alpha">
-                <li>La siguiente normas aplica al uso de la Plataforma GESTAC: Ley N° 18.331 de Protección de Datos Personales de Uruguay.</li>
-            </ol>
-            <h4>5. Comunicación de datos personales</h4>
-            <ol class="list-lower-alpha">
-                <li>Los datos personales recabados en la plataforma GESTAC podrán ser comunicados a Entidades Públicas o a terceros, única y exclusivamente, cuando medio orden judicial, obligación contractual, obligación normativa con las entidades públicas, a pedido expreso y por escrito del Usuario interesado o bajo consentimiento por escrito e informado del mismo.</li>
-            </ol>
-            <h4>6. Cookies</h4>
-            <ol class="list-lower-alpha">
-                <li>La Plataforma podrá utilizar cookies cuando el usuario navega por el sitio web, pero éste puede configurar su navegador para ser avisado de la recepción de las cookies e impedir, en caso de considerarlo adecuado, su instalación en el disco duro o memoria de su computadora u otro dispositivo que esté utilizando. La no aceptación de cookies podrá afectar las funcionalidades de la Plataforma.</li>
-            </ol>
-
+          <h3> Policy Use and Privacy </h3>
+                      <h4> 1. Terms and Conditions </h4>
+                      <ol class = "list-lower-alpha">
+                          <li> The use and services of the KNOWSHARE platform attributes the condition of User to those accessing the platform. At the time of access, the User fully and unreservedly accepts each and every one of the provisions contained in this Privacy Policy and use, as well as the legal and contractual conditions applicable. </li>
+                          <li> The User must carefully read this Policy, ignorance does not exent the User of consequences or actions arising from any violation of it. This policy may change. </li>
+                          <li> This Policy applies to all physical, legal, public, state or entity person you access, download, use, modify, reuse and / or redistribute information contained in the Platform GESTAC, directly or through a computer application . This policy linked to any user simply by making use of content and information of the Platform. </li>
+                      </ol>
+                      <h4> 2. Conditions of access and use </h4>
+                      <ol class = "list-lower-alpha">
+                          <li> Users are obliged to make ethical and legal use of the framework provided in the KNOWSHARE platform and its contents, respecting moral and public order, in all cases to avoid damage to the platform itself, the persons comprised as well as entities which represent recorded information. </li>
+                          <li> To this end, the User shall not use any of the services or information Platform GESTAC with illegal purposes, prohibited in this Policy, harm the rights and interests of others, or in any way could damage, disable, overburden, impair or impede the normal use of the services provided through it. </li>
+                      </ol>
+                      <h4> 3. Purpose of personal information </h4>
+                      <ol class = "list-lower-alpha">
+                          <li> The personal information you provide will be used in order to provide better services and to make available the native functionality in the Platform. </li>
+                          <li> The retrieval and processing of data through automated mechanisms in order to generate records and activity in the Platform, will never involve operations that allow other users except administrators, link that information to the concerned user, either by explicit reference or identity might be identifiable by all and profile data known or accessed. </li>
+                      </ol>
+                      <h4> 4. Regulatory framework </h4>
+                      <ol class = "list-lower-alpha">
+                          <li> The following rules apply to the use of the Platform KNOWSHARE: Law No. 18.331 Protection of Personal Data in Uruguay </li>.
+                      </ol>
+                      <h4> 5. Personal Data Communication </​​h4>
+                      <ol class = "list-lower-alpha">
+                          <li> Personal data retrieved in the KNOWSHARE platform may be communicated to public entities or third parties, solely, by court order, contractual obligations, regulatory obligations with public entities, at the express request in writing from the User interested or under and informed written consent. </li>
+                      </ol>
+                      <h4> 6. Cookies </h4>
+                      <ol class = "list-lower-alpha">
+                          <li> The Platform may use cookies when the user navigates through the website. The browser may notify the use and receipt of cookies and prevent, if deemed appropriate, their installation on the hard disk or memory your computer or other device you are using. Non-acceptance of cookies may affect the functionality of the Platform. </li>
+                      </ol>
         </div>
         <!-- / Division -->
     </section>

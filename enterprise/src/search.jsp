@@ -12,12 +12,12 @@
 
             <c:if test="${param.queryType eq 'ALL' or param.queryType eq 'PROBLEM'}">
                 <!-- Problems table -->
-                <h3>Problemas</h3>
+                <h3>Problems</h3>
                 <table id="problemsTable" class="fa-table">
                     <thead>
-                        <th>Título</th>
-                        <th>Descripción</th>
-                        <th>Área</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Area</th>
                     </thead>
                     <tbody>
                         <c:forEach items="${requestScope.PROBLEMS_LIST}" var="problem">
@@ -34,11 +34,11 @@
 
             <c:if test="${param.queryType eq 'ALL' or param.queryType eq 'SOURCE'}">
                 <!-- Sources table -->
-                <h3>Fuentes</h3>
+                <h3>Source</h3>
                 <table id="problemsTable" class="fa-table">
                     <thead>
-                    <th>Título</th>
-                    <th>Descripción</th>
+                    <th>Title</th>
+                    <th>Description</th>
                     </thead>
                     <tbody>
                     <c:forEach items="${requestScope.SOURCES_LIST}" var="source">
@@ -54,11 +54,11 @@
 
             <c:if test="${param.queryType eq 'ALL' or param.queryType eq 'KNOWLEDGE'}">
                 <!-- Knowledges table -->
-                <h3>Conocimientos</h3>
+                <h3>Knowledge</h3>
                 <table id="knowledgesTable" class="fa-table">
                     <thead>
-                    <th>Título</th>
-                    <th>Descripción</th>
+                    <th>Title</th>
+                    <th>Description</th>
                     </thead>
                     <tbody>
                     <c:forEach items="${requestScope.KNOWLEDGES_LIST}" var="knowledge">
@@ -75,4 +75,3 @@
         </div>
     </section>
 </t:template>
-

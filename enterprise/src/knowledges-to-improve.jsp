@@ -7,19 +7,19 @@
     <section class="content">
         <!--Manejo de Problemas-->
         <div class="wrapper">
-            <h3><i class="fa fa-warning fa-2x"></i> :: :: Conocimientos a mejorar</h3>
+            <h3><i class="fa fa-warning fa-2x"></i> :: :: Knowledge to improve</h3>
 
             <table id="areasTable" class="fa-table">
                 <thead>
                 <th></th>
-                <th>Conocimiento</th>
-                <th>Problema</th>
-                <th>Fuente</th>
+                <th>Knowledge</th>
+                <th>Problem</th>
+                <th>Source</th>
                 </thead>
                 <tbody>
                 <c:forEach items="${requestScope.KNOWLEDGES_LIST}" var="knowledge">
                     <tr>
-                        <td><a href="<c:url value="editknowledge?id=${knowledge.id}"/>">Mejorar</a></td>
+                        <td><a href="<c:url value="editknowledge?id=${knowledge.id}"/>">Improve</a></td>
                         <td>${knowledge.title}</td>
                         <td>${knowledge.problem.title}</td>
                         <td>${knowledge.sourceWithKnowledge.name}</td>
