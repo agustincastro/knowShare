@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /*___ Myth vars ___*/
 
@@ -16,7 +16,7 @@ html {
 
 body {
   background: #fafafa;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   color: #585858;
   font-weight: 300;
   min-height: 100vh;
@@ -53,9 +53,6 @@ body {
 header {
   background: rgb(52, 141, 163);
   position: relative;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(113, 129, 86);
 }
 
 .site-title {
@@ -67,10 +64,6 @@ header {
 }
 
 .site-logo {
-  height: 47px;
-  width: 192px;
-  background: url(../img/logo_white.png) no-repeat center center;
-  text-indent: -9999em;
   margin: 0;
   padding: 0;
   display: inline-block;
@@ -133,7 +126,7 @@ button {
   text-shadow: 0 0 .5em rgba(0, 0, 0, 0.09);
   -webkit-box-shadow: inset 0 0 1.5em rgba(0, 0, 0, 0.12);
   box-shadow: inset 0 0 1.5em rgba(0, 0, 0, 0.12);
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
 }
 
 button:hover {
@@ -141,14 +134,12 @@ button:hover {
 }
 
 nav {
-  width: 12em;
   float: left;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
-  background: rgb(238, 238, 238);
   margin: 0;
   vertical-align: top;
   border-right-width: 1px;
@@ -188,13 +179,6 @@ nav a {
   padding: .5em;
   text-decoration: none;
   display: block;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(211, 231, 177);
-}
-
-nav a:hover {
-  background: rgb(233, 243, 216);
 }
 
 .content {
@@ -342,7 +326,7 @@ nav a:hover {
 }
 
 .cpanel .company {
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
   font-size: .85em;
 }
 
@@ -409,7 +393,7 @@ nav a:hover {
   display: block;
   padding: 0.5em;
   text-decoration: none;
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
   word-wrap: break-word;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -417,7 +401,7 @@ nav a:hover {
 }
 
 .exit {
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
   color: #fff;
   background-color: rgb(78, 116, 116);
 }
@@ -457,7 +441,7 @@ nav a:hover {
   border-color: rgb(238, 238, 238);
   margin: 0;
   width: 100%;
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
   padding: .5em;
 }
 
@@ -534,7 +518,7 @@ nav a:hover {
   text-shadow: 0 0 .5em rgba(0, 0, 0, 0.09);
   -webkit-box-shadow: inset 0 0 1.5em rgba(0, 0, 0, 0.12);
   box-shadow: inset 0 0 1.5em rgba(0, 0, 0, 0.12);
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
   padding: .5em 1em;
   border-radius: .2em;
   float: right;
@@ -549,7 +533,7 @@ nav a:hover {
   border-style: solid;
   border-width: 1px;
   border-color: rgb(238, 238, 238);
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
   padding: .5em;
   width: 12.5em;
 }
@@ -563,7 +547,7 @@ nav a:hover {
   border-style: solid;
   border-width: 1px;
   border-color: rgb(238, 238, 238);
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
   width: 12.5em;
   padding: .5em;
   height: 5em;
@@ -580,7 +564,7 @@ nav a:hover {
 
 .contact p {
   margin: 0;
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
 }
 
 .contact-trigger .fa {
@@ -596,13 +580,13 @@ nav a:hover {
 .contact label.error {
   margin-top: .5em;
   color: rgb(199, 98, 79);
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
 }
 
 /*___DATA TABLES___*/
 
 table {
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
   font-size: .7em;
   border-style: solid;
   border-width: 1px;
@@ -691,7 +675,7 @@ tr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
   padding: .5em;
 }
 
@@ -843,7 +827,7 @@ tr {
 .forms input[type="password"],
 .forms input[type="email"],
 .forms input[type="file"] {
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
   padding: .5em;
   border-width: 1px;
   border-style: solid;
@@ -892,7 +876,7 @@ tr {
   padding: .5em 1em;
   background: rgb(199, 98, 79);
   color: #fff;
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
 }
 
 .forms input[type="text"]:disabled,
@@ -908,7 +892,7 @@ tr {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
   padding: .5em;
   border-width: 1px;
   border-style: solid;
@@ -993,7 +977,7 @@ button.wide {
   border-color: rgb(238, 238, 238);
   margin: 0;
   width: 100%;
-  font: normal .89em Tahoma, Helvetica, Arial, sans-serif;
+  font: normal .89em "Montserrat", Helvetica, Arial, sans-serif;
   padding: .5em;
 }
 

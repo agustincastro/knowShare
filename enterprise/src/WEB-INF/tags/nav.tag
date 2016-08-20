@@ -20,7 +20,7 @@
             </ul>
         </li> -->
         <li><a href="#"><i class="fa fa-suitcase">
-        </i>Conocimientos &raquo;</a>
+        </i>Conocimientos</a>
             <ul class="sub">
                 <li><a href="<c:url value='/manageknowledge'/>">Administrar Conocimientos</a></li>
                 <c:if test="${sessionScope.LOGGED_USER_TYPE eq 'SOURCE'}">
@@ -31,7 +31,7 @@
 
         <c:if test="${sessionScope.LOGGED_USER_TYPE eq 'SOURCE' && not sessionScope.SOURCE_RATED}">
             <li><a href="#"><i class="fa fa-user">
-            </i>Fuentes &raquo;</a>
+            </i>Fuentes</a>
                 <ul class="sub">
                     <li><a href="<c:url value='ratesource'/>">Perfil Fuente</a></li>
                 </ul>
@@ -40,7 +40,7 @@
 
         <c:if test="${sessionScope.LOGGED_USER_TYPE eq 'ADMIN'}">
             <li><a href="#"><i class="fa fa-user">
-            </i>Fuentes &raquo;</a>
+            </i>Fuentes</a>
                 <ul class="sub">
                     <li><a href="<c:url value='managesources'/>">Administrar Fuentes</a></li>
                     <li><a href="<c:url value='newsource'/>">Nueva Fuente</a></li>
@@ -50,7 +50,7 @@
 
         <c:if test="${sessionScope.LOGGED_USER_TYPE eq 'ADMIN'}">
             <li><a href="#"><i class="fa fa-users">
-            </i>Comunidad de Practica &raquo;</a>
+            </i>Comunidad de Practica</a>
                 <ul class="sub">
                     <li><a href="<c:url value='managecommunities'/>">Administrar Comunidades</a></li>
                     <li><a href="<c:url value='newcommunity'/>">Nueva Comunidad</a></li>
@@ -58,7 +58,7 @@
                 </ul>
             </li>
             <li><a href="#"><i class="fa fa-codepen">
-            </i>Area &raquo;</a>
+            </i>Area</a>
                 <ul class="sub">
                     <li><a href="<c:url value='manageareas'/>">Administrar Areas</a></li>
                     <li><a href="<c:url value='newarea'/>">Nueva Area</a></li>
@@ -66,7 +66,7 @@
             </li>
         </c:if>
         <li><a href="#"><i class="fa fa-warning">
-        </i>Problema &raquo;</a>
+        </i>Problema</a>
             <ul class="sub">
                 <c:if test="${sessionScope.LOGGED_USER_TYPE eq 'ADMIN'}">
                     <li><a href="<c:url value='manageproblems'/>">Administrar Problemas</a></li>

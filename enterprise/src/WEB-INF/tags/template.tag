@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width">
         <title>Acceso - Plataforma GESTAC</title>
         <link rel="stylesheet" href="<c:url value='/static/css/normalize.css'/>">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="<c:url value='/static/css/font-awesome.css'/>">
         <link rel="stylesheet" href="<c:url value='/static/css/jquery.remodal.css'/>">
         <link rel="stylesheet" href="<c:url value='/static/css/output.css'/>">
@@ -30,7 +31,7 @@
     <body>
 
         <header class="clearfix">
-            <h1 class="site-logo">GESTAC</h1>
+            <h1 class="site-logo"><i class="fa fa-bolt"></i><span>KnowShare</span></h1>
 
             <c:if test="${sessionScope.LOGGED_USER != null}">
                 <!-- Avatar de persona que se logueo al sistema-->
