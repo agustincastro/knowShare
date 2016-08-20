@@ -1,2 +1,12 @@
 /enterprise/target/
 enterprise/src/knowShare.war
+enterprise/node_modules/gulp-tomcat/.editorconfig
+enterprise/node_modules/gulp-tomcat/.jshintrc
+enterprise/node_modules/gulp-tomcat/.npmignore
+enterprise/node_modules/gulp-tomcat/gulpfile.js
+enterprise/node_modules/gulp-tomcat/LICENSE
+enterprise/node_modules/gulp-tomcat/package.json
+enterprise/node_modules/gulp-tomcat/pom.json
+enterprise/node_modules/gulp-tomcat/README.md
+enterprise/node_modules/gulp-tomcat/tasks/options.json
+enterprise/node_modules/gulp-tomcat/tasks/tomcat.js
