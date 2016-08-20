@@ -11,10 +11,10 @@
         <div class="wrapper">
             <c:choose>
                 <c:when test="${!(problem == null)}">
-                    <h3><i class="fa fa-user fa-2x"></i> :: :: Editar Problema</h3>
+                    <h3><i class="fa fa-user fa-2x"></i> :: :: Edit Problem</h3>
                 </c:when>
                 <c:otherwise>
-                    <h3><i class="fa fa-user fa-2x"></i> :: :: Nuevo Problema</h3>
+                    <h3><i class="fa fa-user fa-2x"></i> :: :: New Problem</h3>
                 </c:otherwise>
             </c:choose>
             <form class="forms" method="post" action="
@@ -29,10 +29,10 @@
                 ">
                 <ul>
                     <li>
-                        <label class="mid" for="title">Nombre<span class="reference--required" title="Requerido">*</span>
+                        <label class="mid" for="title">Name<span class="reference--required" title="Required">*</span>
                             <input type="text" name="title" id="title" value="${problem.title}" required />
                         </label>
-                        <label class="mid" for="area">Área<span class="reference--required" title="Requerido">*</span>
+                        <label class="mid" for="area">Area<span class="reference--required" title="Required">*</span>
                             <select name="area" id="area" required >
                                 <c:forEach items="${requestScope.AREAS_LIST}" var="area">
                                     <option value="${area.id}" <c:if test="${area.id eq problem.area.id}"> selected </c:if>>${area.name}</option>
@@ -41,12 +41,12 @@
                         </label>
                     </li>
                     <li>
-                        <label class="mid" for="description">Descripción<span class="reference--required" title="Requerido">*</span>
+                        <label class="mid" for="description">Description<span class="reference--required" title="Required">*</span>
                             <textarea name="description" id="description" maxlength="1000">${problem.description}</textarea>
                         </label>
                     </li>
                     <li class="clearfix">
-                        <button type="submit">Guardar</button>
+                        <button type="submit">Save</button>
                     </li>
                 </ul>
             </form>
@@ -54,6 +54,3 @@
     </section><!--.content-->
 
 </t:template>
-
-
-

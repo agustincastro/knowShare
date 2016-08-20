@@ -7,17 +7,17 @@
     <section class="content">
         <!--Manejo de Problemas-->
         <div class="wrapper">
-            <h3><i class="fa fa-warning fa-2x"></i> :: :: Administración de Áreas</h3>
+            <h3><i class="fa fa-warning fa-2x"></i> :: :: Area Management</h3>
 
             <table id="areasTable" class="fa-table">
                 <thead>
                     <th></th>
-                    <th>Nombre</th>
+                    <th>Name</th>
                 </thead>
                 <tbody>
                     <c:forEach items="${requestScope.AREAS_LIST}" var="area">
                         <tr>
-                            <td><a href="<c:url value="editarea?id=${area.id}"/>">Editar</a></td>
+                            <td><a href="<c:url value="editarea?id=${area.id}"/>">Edit</a></td>
                             <td>${area.name}</td>
                         </tr>
                     </c:forEach>

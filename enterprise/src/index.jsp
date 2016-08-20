@@ -16,7 +16,7 @@
 
                 <c:if test="${requestScope.UNSOLVED_PROBLEMS && sessionScope.LOGGED_USER_TYPE eq 'SOURCE'}">
                     <div>
-                        <h3>Problemas sin resolver</h3>
+                        <h3>Unsolved Problems</h3>
                         <ul class="items-list clearfix">
 
                             <li class="item-box">
@@ -90,7 +90,7 @@
                     </ul>
 
                     <!-- Items List -->
-                    <h3>Best ranked Sources</h3>
+                    <h3>Best Ranked Sources</h3>
                     <ul class="items-list clearfix">
                         <c:forEach items="${requestScope.SOURCES_LIST}" var="source">
                             <li class="item-box">

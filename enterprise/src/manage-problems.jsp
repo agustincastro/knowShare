@@ -7,18 +7,18 @@
     <section class="content">
         <!--Manejo de Problemas-->
         <div class="wrapper">
-            <h3><i class="fa fa-warning fa-2x"></i> :: :: Administración de Problemas</h3>
+            <h3><i class="fa fa-warning fa-2x"></i> :: :: Problem Management</h3>
 
             <table id="problemsTable" class="fa-table">
                 <thead>
                 <th></th>
-                <th>Área</th>
-                <th>Nombre</th>
+                <th>Area</th>
+                <th>Name</th>
                 </thead>
                 <tbody>
                 <c:forEach items="${requestScope.PROBLEMS_LIST}" var="problem">
                     <tr>
-                        <td><a href="<c:url value="editproblem?id=${problem.id}"/>">Editar</a></td>
+                        <td><a href="<c:url value="editproblem?id=${problem.id}"/>">Edit</a></td>
                         <td>${problem.area.name}</td>
                         <td>${problem.title}</td>
                     </tr>

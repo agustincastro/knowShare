@@ -10,7 +10,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width">
-        <title>Acceso - Plataforma GESTAC</title>
+        <title>Access - KNOWSHARE</title>
         <link rel="stylesheet" href="<c:url value='/static/css/normalize.css'/>">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="<c:url value='/static/css/font-awesome.css'/>">
@@ -50,8 +50,8 @@
                 <!-- Opciones para persona que se loguea al sistema-->
                 <div class="user-cpanel">
                     <ul>
-                        <li><a href="<c:url value='view-user'/>">Editar perfil</a></li>
-                        <li><a class="exit" href="<c:url value='logout'/>">Salir</a></li>
+                        <li><a href="<c:url value='view-user'/>">Edit profile</a></li>
+                        <li><a class="exit" href="<c:url value='logout'/>">Logout</a></li>
                     </ul>
                 </div>
                 <!--.user-cpanel-->
@@ -63,8 +63,8 @@
     </body>
 
     <footer class="footer">
-        <p>Gestion de Conocimientos Tacitos</p>
+        <p>Intelligent Tacit Knowledge Management</p>
         <div class="footer__logotypes"></div>
-        <p><a href="<c:url value='legal'/>">Política de uso y privacidad</a></p>
+        <p><a href="<c:url value='legal'/>">Policy use and privacy</a></p>
     </footer>
 </html>

@@ -5,10 +5,10 @@
 <nav>
     <ul class="site-nav">
         <li><a href="<c:url value='index'/>">
-            <i class="fa fa-home"></i>Inicio</a>
+            <i class="fa fa-home"></i>Home</a>
         </li>
         <li><a href="<c:url value='search'/>">
-            <i class="fa fa-search"></i>Buscar</a>
+            <i class="fa fa-search"></i>Search</a>
         </li>
         <!--
         <li><a href="#"><i class="fa fa-list-alt">
@@ -20,58 +20,58 @@
             </ul>
         </li> -->
         <li><a href="#"><i class="fa fa-suitcase">
-        </i>Conocimientos</a>
+        </i>Knowledge</a>
             <ul class="sub">
-                <li><a href="<c:url value='/manageknowledge'/>">Administrar Conocimientos</a></li>
+                <li><a href="<c:url value='/manageknowledge'/>">Manage Knowledge</a></li>
                 <c:if test="${sessionScope.LOGGED_USER_TYPE eq 'SOURCE'}">
-                    <li><a href="<c:url value='/newknowledge'/>">Nuevo Conocimiento</a></li>
+                    <li><a href="<c:url value='/newknowledge'/>">New Knowledge</a></li>
                 </c:if>
             </ul>
         </li>
 
         <c:if test="${sessionScope.LOGGED_USER_TYPE eq 'SOURCE' && not sessionScope.SOURCE_RATED}">
             <li><a href="#"><i class="fa fa-user">
-            </i>Fuentes</a>
+            </i>Sources</a>
                 <ul class="sub">
-                    <li><a href="<c:url value='ratesource'/>">Perfil Fuente</a></li>
+                    <li><a href="<c:url value='ratesource'/>">Source Profile</a></li>
                 </ul>
             </li>
         </c:if>
 
         <c:if test="${sessionScope.LOGGED_USER_TYPE eq 'ADMIN'}">
             <li><a href="#"><i class="fa fa-user">
-            </i>Fuentes</a>
+            </i>Sources</a>
                 <ul class="sub">
-                    <li><a href="<c:url value='managesources'/>">Administrar Fuentes</a></li>
-                    <li><a href="<c:url value='newsource'/>">Nueva Fuente</a></li>
+                    <li><a href="<c:url value='managesources'/>">Manage Sources</a></li>
+                    <li><a href="<c:url value='newsource'/>">New Source</a></li>
                 </ul>
             </li>
         </c:if>
 
         <c:if test="${sessionScope.LOGGED_USER_TYPE eq 'ADMIN'}">
             <li><a href="#"><i class="fa fa-users">
-            </i>Comunidad de Practica</a>
+            </i>Practice Community</a>
                 <ul class="sub">
-                    <li><a href="<c:url value='managecommunities'/>">Administrar Comunidades</a></li>
-                    <li><a href="<c:url value='newcommunity'/>">Nueva Comunidad</a></li>
+                    <li><a href="<c:url value='managecommunities'/>">Manage Practice Communities</a></li>
+                    <li><a href="<c:url value='newcommunity'/>">New Practice Community</a></li>
 
                 </ul>
             </li>
             <li><a href="#"><i class="fa fa-codepen">
             </i>Area</a>
                 <ul class="sub">
-                    <li><a href="<c:url value='manageareas'/>">Administrar Areas</a></li>
-                    <li><a href="<c:url value='newarea'/>">Nueva Area</a></li>
+                    <li><a href="<c:url value='manageareas'/>">Manage Areas</a></li>
+                    <li><a href="<c:url value='newarea'/>">New Area</a></li>
                 </ul>
             </li>
         </c:if>
         <li><a href="#"><i class="fa fa-warning">
-        </i>Problema</a>
+        </i>Problems</a>
             <ul class="sub">
                 <c:if test="${sessionScope.LOGGED_USER_TYPE eq 'ADMIN'}">
-                    <li><a href="<c:url value='manageproblems'/>">Administrar Problemas</a></li>
+                    <li><a href="<c:url value='manageproblems'/>">Manage Problemas</a></li>
                 </c:if>
-                <li><a href="<c:url value='newproblem'/>">Nuevo Problema</a></li>
+                <li><a href="<c:url value='newproblem'/>">New Problem</a></li>
             </ul>
         </li>
 

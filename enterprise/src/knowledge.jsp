@@ -158,13 +158,13 @@
                                         <legend>¿How long did it take to solve problems using the Knowledge?</legend>
                                         <ol>
                                             <label for="tiemporesolucion">Estimated resolution time
-                                                <select id="tiemporesolucion" name="time_to_solved" size="1" title="¿En cuanto tiempo considera que se puede aplicar exitosamente este conocimiento?" required>
+                                                <select id="tiemporesolucion" name="time_to_solved" size="1" title="How much time does it take to apply knowledge successfully?" required>
                                                     <option value="0" <c:if test="${knowledge.timeToSolved eq 0}">selected</c:if>>Select</option>
-                                                    <option value="0" <c:if test="${knowledge.timeToSolved eq 0}">selected</c:if>>EL TIEMPO DE RESOLUCIÓN, UTILIZANDO EL CONOCIMIENTO, LLEVA 24 HORAS MÁXIMO</option>
-                                                    <option value="0.25" <c:if test="${knowledge.timeToSolved eq 0.25}">selected</c:if>>EL TIEMPO DE RESOLUCIÓN, UTILIZANDO EL CONOCIMIENTO, LLEVA 16 HORAS MÁXIMO</option>
-                                                    <option value="0.5" <c:if test="${knowledge.timeToSolved eq 0.5}">selected</c:if>>EL TIEMPO DE RESOLUCIÓN, UTILIZANDO EL CONOCIMIENTO, LLEVA ENTRE 4 A 8 HORAS MÁXIMO</option>
-                                                    <option value="0.75" <c:if test="${knowledge.timeToSolved eq 0.75}">selected</c:if>>EL TIEMPO DE RESOLUCIÓN, UTILIZANDO EL CONOCIMIENTO, LLEVA ENTRE 2 A 4 HORAS MÁXIMO</option>
-                                                    <option value="1" <c:if test="${knowledge.timeToSolved eq 1}">selected</c:if>>EL TIEMPO DE RESOLUCIÓN, UTILIZANDO EL CONOCIMIENTO, LLEVA 2 HORAS MÁXIMO</option>
+                                                    <option value="0" <c:if test="${knowledge.timeToSolved eq 0}">selected</c:if>>RESOLUTION TIME TAKES UP TO 24 HOURS</option>
+                                                    <option value="0.25" <c:if test="${knowledge.timeToSolved eq 0.25}">selected</c:if>>RESOLUTION TIME TAKES UP TO 16 HOURS</option>
+                                                    <option value="0.5" <c:if test="${knowledge.timeToSolved eq 0.5}">selected</c:if>>RESOLUTION TIME TAKES UP TO 4 AND 8 HOURS</option>
+                                                    <option value="0.75" <c:if test="${knowledge.timeToSolved eq 0.75}">selected</c:if>>RESOLUTION TIME TAKES UP TO 2 AND 4 HOURS</option>
+                                                    <option value="1" <c:if test="${knowledge.timeToSolved eq 1}">selected</c:if>>RESOLUTION TIME TAKES UP 2 HOURS</option>
                                                 </select>
                                             </label>
                                         </ol>

@@ -11,10 +11,10 @@
         <div class="wrapper">
             <c:choose>
                 <c:when test="${!(community == null)}">
-                    <h3><i class="fa fa-user fa-2x"></i> :: :: Editar Comunidad de Práctica</h3>
+                    <h3><i class="fa fa-user fa-2x"></i> :: :: Edit Practice Community</h3>
                 </c:when>
                 <c:otherwise>
-                    <h3><i class="fa fa-user fa-2x"></i> :: :: Nueva Comunidad de Práctica</h3>
+                    <h3><i class="fa fa-user fa-2x"></i> :: :: New Practice Community</h3>
                 </c:otherwise>
             </c:choose>
 
