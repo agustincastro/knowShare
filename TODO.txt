@@ -1,0 +1,22 @@
+Observaciones (cualquier cosa que necesites una mano avisa!!):
+
+- La barra de busqueda ponerla arriba y sacarla de la left nav. Y si se puede lograr 
+haciendo un click que pase algo bien parecido a lo de scotch.
+Lo que es la query de la busqueda ya esta asi que funcionalidad es un toque.
+- Mas grande aun la left nav - las opciones.
+- En index creo que los tamaños estan bien, pero si entras como una fuente. Por ej:
+user: hiroagustin@gmail.com
+pass: admin
+Los "Unsolved problems" quedan muy chicos para el contenedor y se corta.
+- Buenisimo lo de los text boxes, pero cuando esta en foco los encuadra y se podra
+lograr el efecto ese que te mostre que como que achica Username, Password, etc. mientras
+lo vas escribiendo?
+- Estilo de comboboxes.
+- Algunos botones como "view details" y "register" siguen muy chiquitos.
+- Esto capaz que es de rompe huevos...pero la login me gustaria algo que veo que se 
+hace bastante...www.floship.com entra ahi...esa la hizo el austin...el scroll...
+bien grande lo de las credenciales con algun titulo que yo agrego y cuando vas bajando
+ahi tiro el humo de lo que se ve al costado.
+
+PS: Si no me pasas tu nro de cuenta te voy a dejar la guita abajo de la almohada la
+concha de la lora jajaja.
