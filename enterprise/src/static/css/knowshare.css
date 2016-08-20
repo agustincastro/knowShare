@@ -26,6 +26,9 @@ header{
   text-align: center;
   font-size: 30px;
 }
+.site-logo-full-width{
+  width: 100%;
+}
 .site-logo span{
   margin: 0 5px;
 }
@@ -82,6 +85,9 @@ nav .site-nav > li a .fa{
 }
 nav .site-nav > li a:hover .fa{
 
+}
+.item-box__visual{
+  border-radius: 40px;
 }
 
 .edit-url{

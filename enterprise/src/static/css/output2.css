@@ -94,7 +94,7 @@
   /* 12px */
   font-size: .75rem;
   background: #ebebeb;
-  border: 1px solid #d6d6d6;
+  padding: 20px 10px;
 }
 
 @media (min-width: 68.750em) {
@@ -110,9 +110,9 @@
 
 .item-box__visual {
   /* 100px */
-  width: 6.25rem;
+  width: 8.25rem;
   /* 100px */
-  height: 6.25rem;
+  height: 8.25rem;
   padding: 0;
   /* 10px */
   margin: .625rem;
@@ -131,8 +131,8 @@
   /* 56px */
   font-size: 3.5rem;
   /* 100px */
-  line-height: 6.25rem;
-  /*color: rgb(52, 141, 163);*/
+  line-height: 5.25rem;
+  color: #dfdfdf;
 }
 
 
@@ -184,7 +184,7 @@
 
 .item-box__actions {
   /* 10px */
-  padding: .625rem;
+  padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

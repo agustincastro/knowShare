@@ -671,7 +671,7 @@ tr {
 }
 
 .login ul {
-  padding: 1.5em;
+  padding: 1.5em 0;
 }
 
 .login ul li {

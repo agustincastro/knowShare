@@ -31,7 +31,16 @@
     <body>
 
         <header class="clearfix">
-            <h1 class="site-logo"><i class="fa fa-bolt"></i><span>KnowShare</span></h1>
+
+          <c:choose>
+              <c:when test="${sessionScope.LOGGED_USER != null}">
+                <h1 class="site-logo"><i class="fa fa-bolt"></i><span>KnowShare</span></h1>
+              </c:when>
+              <c:otherwise>
+                <h1 class="site-logo site-logo-full-width"><i class="fa fa-bolt"></i><span>KnowShare</span></h1>
+              </c:otherwise>
+          </c:choose>
+
 
             <c:if test="${sessionScope.LOGGED_USER != null}">
                 <!-- Avatar de persona que se logueo al sistema-->
